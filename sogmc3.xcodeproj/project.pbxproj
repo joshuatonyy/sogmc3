@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		139FEA522A41EDBA004FB05D /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEA512A41EDBA004FB05D /* Color+Theme.swift */; };
 		4287971A2A4036F30018869A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428797192A4036F30018869A /* TabBar.swift */; };
 		42E79F672A3E3857003B4482 /* sogmc3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E79F662A3E3857003B4482 /* sogmc3App.swift */; };
 		42E79F692A3E3857003B4482 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E79F682A3E3857003B4482 /* ContentView.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		139FEA512A41EDBA004FB05D /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Theme.swift"; sourceTree = "<group>"; };
 		428797192A4036F30018869A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		42E79F632A3E3857003B4482 /* sogmc3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sogmc3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E79F662A3E3857003B4482 /* sogmc3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sogmc3App.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				423944462A3E3CBA00E5F23E /* Presentations */,
+				139FEA512A41EDBA004FB05D /* Color+Theme.swift */,
 			);
 			path = Themes;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4287971A2A4036F30018869A /* TabBar.swift in Sources */,
+				139FEA522A41EDBA004FB05D /* Color+Theme.swift in Sources */,
 				42E79F692A3E3857003B4482 /* ContentView.swift in Sources */,
 				42E79F672A3E3857003B4482 /* sogmc3App.swift in Sources */,
 			);
