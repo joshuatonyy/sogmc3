@@ -10,6 +10,16 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabBar()
+            .task {
+                let service = ProfileNetworkDataSource()
+                let result = await service.getAccessToken()
+                switch result {
+                case .success(let success):
+                    dump(success)
+                case .failure(let failure):
+                    dump(failure)
+                }
+            }
     }
 }
 
