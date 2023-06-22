@@ -14,7 +14,7 @@
 		139FEA922A44773B004FB05D /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEA912A44773B004FB05D /* RequestError.swift */; };
 		139FEA942A447958004FB05D /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEA932A447958004FB05D /* HTTPClient.swift */; };
 		139FEA972A44868C004FB05D /* URLRequest+initFromEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEA962A44868C004FB05D /* URLRequest+initFromEndpoint.swift */; };
-		139FEA9C2A448916004FB05D /* ProfileNetworkDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEA9B2A448916004FB05D /* ProfileNetworkDataSource.swift */; };
+		139FEA9C2A448916004FB05D /* ProfileRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEA9B2A448916004FB05D /* ProfileRemoteDataSource.swift */; };
 		139FEA9E2A448971004FB05D /* ProfileEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEA9D2A448971004FB05D /* ProfileEndpoint.swift */; };
 		4287971A2A4036F30018869A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428797192A4036F30018869A /* TabBar.swift */; };
 		42E79F672A3E3857003B4482 /* sogmc3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E79F662A3E3857003B4482 /* sogmc3App.swift */; };
@@ -31,7 +31,7 @@
 		139FEA912A44773B004FB05D /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		139FEA932A447958004FB05D /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		139FEA962A44868C004FB05D /* URLRequest+initFromEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+initFromEndpoint.swift"; sourceTree = "<group>"; };
-		139FEA9B2A448916004FB05D /* ProfileNetworkDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNetworkDataSource.swift; sourceTree = "<group>"; };
+		139FEA9B2A448916004FB05D /* ProfileRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRemoteDataSource.swift; sourceTree = "<group>"; };
 		139FEA9D2A448971004FB05D /* ProfileEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEndpoint.swift; sourceTree = "<group>"; };
 		428797192A4036F30018869A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		42E79F632A3E3857003B4482 /* sogmc3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sogmc3.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,7 +99,7 @@
 		139FEA9A2A4487EB004FB05D /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				139FEA9B2A448916004FB05D /* ProfileNetworkDataSource.swift */,
+				139FEA9B2A448916004FB05D /* ProfileRemoteDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -338,7 +338,7 @@
 				139FEA972A44868C004FB05D /* URLRequest+initFromEndpoint.swift in Sources */,
 				42E79F672A3E3857003B4482 /* sogmc3App.swift in Sources */,
 				139FEA922A44773B004FB05D /* RequestError.swift in Sources */,
-				139FEA9C2A448916004FB05D /* ProfileNetworkDataSource.swift in Sources */,
+				139FEA9C2A448916004FB05D /* ProfileRemoteDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
