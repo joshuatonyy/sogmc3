@@ -11,8 +11,8 @@ struct ContentView: View {
     var body: some View {
         TabBar()
             .task {
-                let service = ProfileNetworkDataSource()
-                let result = await service.getAccessToken()
+                let service = ProfileRemoteDataSource()
+                let result = await service.getPublicAccessToken()
                 switch result {
                 case .success(let success):
                     dump(success)
