@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		139FEA522A41EDBA004FB05D /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEA512A41EDBA004FB05D /* Color+Theme.swift */; };
+		3FC678322A42D150007F33DF /* CoreDataContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FC678302A42D150007F33DF /* CoreDataContainer.xcdatamodeld */; };
+		3FC678342A42D17F007F33DF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC678332A42D17F007F33DF /* CoreDataManager.swift */; };
+		3FC678392A442A75007F33DF /* CoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC678382A442A75007F33DF /* CoreDataViewModel.swift */; };
 		4287971A2A4036F30018869A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428797192A4036F30018869A /* TabBar.swift */; };
 		42E79F672A3E3857003B4482 /* sogmc3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E79F662A3E3857003B4482 /* sogmc3App.swift */; };
 		42E79F692A3E3857003B4482 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E79F682A3E3857003B4482 /* ContentView.swift */; };
@@ -17,6 +20,9 @@
 
 /* Begin PBXFileReference section */
 		139FEA512A41EDBA004FB05D /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Theme.swift"; sourceTree = "<group>"; };
+		3FC678312A42D150007F33DF /* CoreDataContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataContainer.xcdatamodel; sourceTree = "<group>"; };
+		3FC678332A42D17F007F33DF /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3FC678382A442A75007F33DF /* CoreDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewModel.swift; sourceTree = "<group>"; };
 		428797192A4036F30018869A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		42E79F632A3E3857003B4482 /* sogmc3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sogmc3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E79F662A3E3857003B4482 /* sogmc3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sogmc3App.swift; sourceTree = "<group>"; };
@@ -36,6 +42,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FC6782F2A42D137007F33DF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3FC678302A42D150007F33DF /* CoreDataContainer.xcdatamodeld */,
+				3FC678332A42D17F007F33DF /* CoreDataManager.swift */,
+				3FC678382A442A75007F33DF /* CoreDataViewModel.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3FC678372A42D34C007F33DF /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		4239443F2A3E3AFD00E5F23E /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +87,7 @@
 		423944422A3E3B2C00E5F23E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3FC6782F2A42D137007F33DF /* Utilities */,
 				423944442A3E3B7A00E5F23E /* Data */,
 				423944452A3E3B8800E5F23E /* Themes */,
 			);
@@ -73,6 +97,7 @@
 		423944432A3E3B3500E5F23E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				3FC678372A42D34C007F33DF /* CoreData */,
 				428797152A40367A0018869A /* Home */,
 			);
 			path = Features;
@@ -255,9 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC678342A42D17F007F33DF /* CoreDataManager.swift in Sources */,
 				4287971A2A4036F30018869A /* TabBar.swift in Sources */,
+				3FC678392A442A75007F33DF /* CoreDataViewModel.swift in Sources */,
 				139FEA522A41EDBA004FB05D /* Color+Theme.swift in Sources */,
 				42E79F692A3E3857003B4482 /* ContentView.swift in Sources */,
+				3FC678322A42D150007F33DF /* CoreDataContainer.xcdatamodeld in Sources */,
 				42E79F672A3E3857003B4482 /* sogmc3App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,6 +487,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3FC678302A42D150007F33DF /* CoreDataContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3FC678312A42D150007F33DF /* CoreDataContainer.xcdatamodel */,
+			);
+			currentVersion = 3FC678312A42D150007F33DF /* CoreDataContainer.xcdatamodel */;
+			path = CoreDataContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 42E79F5B2A3E3857003B4482 /* Project object */;
 }
