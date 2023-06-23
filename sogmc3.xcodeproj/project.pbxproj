@@ -13,6 +13,13 @@
 		42E79F692A3E3857003B4482 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E79F682A3E3857003B4482 /* ContentView.swift */; };
 		42E79F6B2A3E3857003B4482 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42E79F6A2A3E3857003B4482 /* Assets.xcassets */; };
 		42E79F6E2A3E3857003B4482 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42E79F6D2A3E3857003B4482 /* Preview Assets.xcassets */; };
+		801CFC7C2A43F677005E4AE2 /* ProgressBarHomeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801CFC7B2A43F677005E4AE2 /* ProgressBarHomeComponent.swift */; };
+		801CFC7E2A43F6E2005E4AE2 /* TopSpendingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801CFC7D2A43F6E2005E4AE2 /* TopSpendingComponent.swift */; };
+		801CFC802A43F75C005E4AE2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801CFC7F2A43F75C005E4AE2 /* HomeView.swift */; };
+		801CFC822A43F9DB005E4AE2 /* TopSpendingListCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801CFC812A43F9DB005E4AE2 /* TopSpendingListCardComponent.swift */; };
+		8028DB202A444576009210D2 /* PickerTopSpendingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8028DB1F2A444576009210D2 /* PickerTopSpendingComponent.swift */; };
+		8067AD562A42B117009085C2 /* DashboardCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067AD552A42B117009085C2 /* DashboardCardComponent.swift */; };
+		8067AD5A2A42EA9D009085C2 /* RemainingBalanceComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8067AD592A42EA9D009085C2 /* RemainingBalanceComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +30,13 @@
 		42E79F682A3E3857003B4482 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		42E79F6A2A3E3857003B4482 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42E79F6D2A3E3857003B4482 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		801CFC7B2A43F677005E4AE2 /* ProgressBarHomeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarHomeComponent.swift; sourceTree = "<group>"; };
+		801CFC7D2A43F6E2005E4AE2 /* TopSpendingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSpendingComponent.swift; sourceTree = "<group>"; };
+		801CFC7F2A43F75C005E4AE2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = sogmc3/Features/Home/Presenters/Components/HomeComponent/HomeView.swift; sourceTree = SOURCE_ROOT; };
+		801CFC812A43F9DB005E4AE2 /* TopSpendingListCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSpendingListCardComponent.swift; sourceTree = "<group>"; };
+		8028DB1F2A444576009210D2 /* PickerTopSpendingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTopSpendingComponent.swift; sourceTree = "<group>"; };
+		8067AD552A42B117009085C2 /* DashboardCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCardComponent.swift; sourceTree = "<group>"; };
+		8067AD592A42EA9D009085C2 /* RemainingBalanceComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainingBalanceComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +142,7 @@
 		428797162A4036820018869A /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				8007C1932A45583100B09D2C /* Extensions */,
 				428797182A4036960018869A /* Views */,
 				428797172A40368B0018869A /* Components */,
 			);
@@ -137,6 +152,12 @@
 		428797172A40368B0018869A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				8067AD592A42EA9D009085C2 /* RemainingBalanceComponent.swift */,
+				8067AD552A42B117009085C2 /* DashboardCardComponent.swift */,
+				801CFC7B2A43F677005E4AE2 /* ProgressBarHomeComponent.swift */,
+				801CFC7D2A43F6E2005E4AE2 /* TopSpendingComponent.swift */,
+				801CFC812A43F9DB005E4AE2 /* TopSpendingListCardComponent.swift */,
+				8028DB1F2A444576009210D2 /* PickerTopSpendingComponent.swift */,
 				428797192A4036F30018869A /* TabBar.swift */,
 			);
 			path = Components;
@@ -145,6 +166,7 @@
 		428797182A4036960018869A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				801CFC7F2A43F75C005E4AE2 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +205,13 @@
 				42E79F6D2A3E3857003B4482 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8007C1932A45583100B09D2C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,10 +284,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8028DB202A444576009210D2 /* PickerTopSpendingComponent.swift in Sources */,
+				801CFC802A43F75C005E4AE2 /* HomeView.swift in Sources */,
+				801CFC7C2A43F677005E4AE2 /* ProgressBarHomeComponent.swift in Sources */,
 				4287971A2A4036F30018869A /* TabBar.swift in Sources */,
 				139FEA522A41EDBA004FB05D /* Color+Theme.swift in Sources */,
+				801CFC7E2A43F6E2005E4AE2 /* TopSpendingComponent.swift in Sources */,
+				801CFC822A43F9DB005E4AE2 /* TopSpendingListCardComponent.swift in Sources */,
 				42E79F692A3E3857003B4482 /* ContentView.swift in Sources */,
+				8067AD562A42B117009085C2 /* DashboardCardComponent.swift in Sources */,
 				42E79F672A3E3857003B4482 /* sogmc3App.swift in Sources */,
+				8067AD5A2A42EA9D009085C2 /* RemainingBalanceComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
