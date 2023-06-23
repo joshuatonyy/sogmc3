@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct ProfileRemoteDataSource: HTTPClient {
+struct ProfileRemoteDataSource: ProfileRemoteDataSourceProtocol, HTTPClient {
     
-    func getAccessToken() async -> Result<AuthResponse, RequestError> {
+    func getPublicAccessToken() async -> Result<AuthResponse, RequestError> {
         await sendRequest(
             endpoint: ProfileEndpoint.auth,
             responseModel: AuthResponse.self
