@@ -25,8 +25,8 @@ class ProfileViewModel: ObservableObject {
 // TODO: change all font color
 struct ProfileView: View {
     @StateObject var profileVM = ProfileViewModel()
-    @State private var showModal = false
-
+    @State private var showModalIncome = false
+    @State private var showModalReminder = false
     
     var body: some View {
         VStack{
@@ -52,7 +52,7 @@ struct ProfileView: View {
             Button (action: {
                 // Button action code
                 print("Button tapped")
-                showModal = true
+                showModalIncome = true
             }) {
                 HStack{
                     ZStack{
@@ -71,7 +71,7 @@ struct ProfileView: View {
                 .padding(.top, 10)
                 .padding(.leading, 15)
             }
-            .sheet(isPresented: $showModal) {
+            .sheet(isPresented: $showModalIncome) {
                 EditIncomeSheetView()
             }
 
@@ -79,6 +79,8 @@ struct ProfileView: View {
             Button (action: {
                 // Button action code
                 print("Button tapped")
+                showModalIncome = true
+
             }){
                 HStack{
                     ZStack{
@@ -96,6 +98,10 @@ struct ProfileView: View {
                 .padding(.top, 10)
                 .padding(.leading, 15)
             }
+            .sheet(isPresented: $showModalReminder) {
+                SetReminderView()
+            }
+
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .background(Color.Background.main)

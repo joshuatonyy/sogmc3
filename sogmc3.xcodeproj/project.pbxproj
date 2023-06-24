@@ -27,6 +27,7 @@
 		2646415F2A4761DF00F56182 /* BankCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2646415E2A4761DF00F56182 /* BankCard.swift */; };
 		264641622A4761F400F56182 /* ConnectedBankSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264641612A4761F400F56182 /* ConnectedBankSections.swift */; };
 		264641642A476B0800F56182 /* EditIncomeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264641632A476B0800F56182 /* EditIncomeSheetView.swift */; };
+		264641662A47712E00F56182 /* SetReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264641652A47712E00F56182 /* SetReminderView.swift */; };
 		4287971A2A4036F30018869A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428797192A4036F30018869A /* TabBar.swift */; };
 		4287974C2A4578750018869A /* TabBar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4287974B2A4578750018869A /* TabBar2.swift */; };
 		42E79F672A3E3857003B4482 /* sogmc3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E79F662A3E3857003B4482 /* sogmc3App.swift */; };
@@ -63,6 +64,7 @@
 		2646415E2A4761DF00F56182 /* BankCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
 		264641612A4761F400F56182 /* ConnectedBankSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedBankSections.swift; sourceTree = "<group>"; };
 		264641632A476B0800F56182 /* EditIncomeSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIncomeSheetView.swift; sourceTree = "<group>"; };
+		264641652A47712E00F56182 /* SetReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetReminderView.swift; sourceTree = "<group>"; };
 		428797192A4036F30018869A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		4287974B2A4578750018869A /* TabBar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar2.swift; sourceTree = "<group>"; };
 		42E79F632A3E3857003B4482 /* sogmc3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sogmc3.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +214,7 @@
 			children = (
 				264641582A47619800F56182 /* ProfileView.swift */,
 				264641632A476B0800F56182 /* EditIncomeSheetView.swift */,
+				264641652A47712E00F56182 /* SetReminderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				139FEAAC2A452281004FB05D /* ProfileRemoteDataSourceProtocol.swift in Sources */,
 				139FEA9E2A448971004FB05D /* ProfileEndpoint.swift in Sources */,
 				139FEA522A41EDBA004FB05D /* Color+Theme.swift in Sources */,
+				264641662A47712E00F56182 /* SetReminderView.swift in Sources */,
 				801CFC7E2A43F6E2005E4AE2 /* TopSpendingComponent.swift in Sources */,
 				264641642A476B0800F56182 /* EditIncomeSheetView.swift in Sources */,
 				801CFC822A43F9DB005E4AE2 /* TopSpendingListCardComponent.swift in Sources */,
