@@ -57,14 +57,6 @@ extension Color {
         static let s100 = Color("neutral-100")
     }
     
-    struct Background {
-        static let main = Color("background-main")
-    }
-    
-    struct CardColor {
-        static let main = Color("cardColor-main")
-    }
-    
     struct Semantic {
         
         struct Success {
