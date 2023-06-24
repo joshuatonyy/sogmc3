@@ -22,6 +22,11 @@
 		139FEAA92A452241004FB05D /* ProfileLocalDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEAA82A452241004FB05D /* ProfileLocalDataSourceProtocol.swift */; };
 		139FEAAC2A452281004FB05D /* ProfileRemoteDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEAAB2A452281004FB05D /* ProfileRemoteDataSourceProtocol.swift */; };
 		139FEAAE2A452315004FB05D /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEAAD2A452315004FB05D /* ProfileRepository.swift */; };
+		264641592A47619800F56182 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264641582A47619800F56182 /* ProfileView.swift */; };
+		2646415D2A4761D400F56182 /* ConnectedAccountsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2646415C2A4761D400F56182 /* ConnectedAccountsCard.swift */; };
+		2646415F2A4761DF00F56182 /* BankCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2646415E2A4761DF00F56182 /* BankCard.swift */; };
+		264641622A4761F400F56182 /* ConnectedBankSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264641612A4761F400F56182 /* ConnectedBankSections.swift */; };
+		264641642A476B0800F56182 /* EditIncomeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264641632A476B0800F56182 /* EditIncomeSheetView.swift */; };
 		4287971A2A4036F30018869A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428797192A4036F30018869A /* TabBar.swift */; };
 		4287974C2A4578750018869A /* TabBar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4287974B2A4578750018869A /* TabBar2.swift */; };
 		42E79F672A3E3857003B4482 /* sogmc3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E79F662A3E3857003B4482 /* sogmc3App.swift */; };
@@ -53,6 +58,11 @@
 		139FEAA82A452241004FB05D /* ProfileLocalDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLocalDataSourceProtocol.swift; sourceTree = "<group>"; };
 		139FEAAB2A452281004FB05D /* ProfileRemoteDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRemoteDataSourceProtocol.swift; sourceTree = "<group>"; };
 		139FEAAD2A452315004FB05D /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
+		264641582A47619800F56182 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2646415C2A4761D400F56182 /* ConnectedAccountsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedAccountsCard.swift; sourceTree = "<group>"; };
+		2646415E2A4761DF00F56182 /* BankCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
+		264641612A4761F400F56182 /* ConnectedBankSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedBankSections.swift; sourceTree = "<group>"; };
+		264641632A476B0800F56182 /* EditIncomeSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIncomeSheetView.swift; sourceTree = "<group>"; };
 		428797192A4036F30018869A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		4287974B2A4578750018869A /* TabBar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar2.swift; sourceTree = "<group>"; };
 		42E79F632A3E3857003B4482 /* sogmc3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sogmc3.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +120,7 @@
 		139FEA982A448708004FB05D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				264641552A47613900F56182 /* Presenters */,
 				139FEA992A4487D5004FB05D /* Data */,
 			);
 			path = Profile;
@@ -175,6 +186,34 @@
 				139FEAAD2A452315004FB05D /* ProfileRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		264641552A47613900F56182 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				264641572A47616200F56182 /* Views */,
+				264641562A47614500F56182 /* Components */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		264641562A47614500F56182 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2646415C2A4761D400F56182 /* ConnectedAccountsCard.swift */,
+				2646415E2A4761DF00F56182 /* BankCard.swift */,
+				264641612A4761F400F56182 /* ConnectedBankSections.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		264641572A47616200F56182 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				264641582A47619800F56182 /* ProfileView.swift */,
+				264641632A476B0800F56182 /* EditIncomeSheetView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4239443F2A3E3AFD00E5F23E /* Config */ = {
@@ -418,16 +457,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				8028DB202A444576009210D2 /* PickerTopSpendingComponent.swift in Sources */,
+				264641622A4761F400F56182 /* ConnectedBankSections.swift in Sources */,
+				264641592A47619800F56182 /* ProfileView.swift in Sources */,
 				801CFC802A43F75C005E4AE2 /* HomeView.swift in Sources */,
 				801CFC7C2A43F677005E4AE2 /* ProgressBarHomeComponent.swift in Sources */,
 				139FEA902A447698004FB05D /* RequestMethod.swift in Sources */,
 				139FEAA52A451E7F004FB05D /* KeychainError.swift in Sources */,
+				2646415F2A4761DF00F56182 /* BankCard.swift in Sources */,
 				139FEA8E2A447677004FB05D /* Endpoint.swift in Sources */,
 				4287971A2A4036F30018869A /* TabBar.swift in Sources */,
 				139FEAAC2A452281004FB05D /* ProfileRemoteDataSourceProtocol.swift in Sources */,
 				139FEA9E2A448971004FB05D /* ProfileEndpoint.swift in Sources */,
 				139FEA522A41EDBA004FB05D /* Color+Theme.swift in Sources */,
 				801CFC7E2A43F6E2005E4AE2 /* TopSpendingComponent.swift in Sources */,
+				264641642A476B0800F56182 /* EditIncomeSheetView.swift in Sources */,
 				801CFC822A43F9DB005E4AE2 /* TopSpendingListCardComponent.swift in Sources */,
 				42E79F692A3E3857003B4482 /* ContentView.swift in Sources */,
 				8067AD562A42B117009085C2 /* DashboardCardComponent.swift in Sources */,
@@ -439,6 +482,7 @@
 				139FEA972A44868C004FB05D /* URLRequest+initFromEndpoint.swift in Sources */,
 				139FEAA32A4512B2004FB05D /* KeychainClient.swift in Sources */,
 				42E79F672A3E3857003B4482 /* sogmc3App.swift in Sources */,
+				2646415D2A4761D400F56182 /* ConnectedAccountsCard.swift in Sources */,
 				8067AD5A2A42EA9D009085C2 /* RemainingBalanceComponent.swift in Sources */,
 				139FEAAE2A452315004FB05D /* ProfileRepository.swift in Sources */,
 				139FEA922A44773B004FB05D /* RequestError.swift in Sources */,
