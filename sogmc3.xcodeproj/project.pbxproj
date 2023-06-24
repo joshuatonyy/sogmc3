@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		139FEA522A41EDBA004FB05D /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEA512A41EDBA004FB05D /* Color+Theme.swift */; };
+		265CA7862A4454D3005CADA8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265CA7852A4454D3005CADA8 /* ProfileView.swift */; };
+		265CA7882A456117005CADA8 /* BankCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265CA7872A456117005CADA8 /* BankCard.swift */; };
+		2682B0D92A46E31200E52C66 /* ConnectedAccountsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2682B0D82A46E31200E52C66 /* ConnectedAccountsCard.swift */; };
+		2682B0DB2A46E5F500E52C66 /* ConnectedBankSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2682B0DA2A46E5F500E52C66 /* ConnectedBankSections.swift */; };
 		4287971A2A4036F30018869A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428797192A4036F30018869A /* TabBar.swift */; };
 		42E79F672A3E3857003B4482 /* sogmc3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E79F662A3E3857003B4482 /* sogmc3App.swift */; };
 		42E79F692A3E3857003B4482 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E79F682A3E3857003B4482 /* ContentView.swift */; };
@@ -17,6 +21,10 @@
 
 /* Begin PBXFileReference section */
 		139FEA512A41EDBA004FB05D /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Theme.swift"; sourceTree = "<group>"; };
+		265CA7852A4454D3005CADA8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = sogmc3/Features/Profile/Presenters/Views/ProfileView.swift; sourceTree = SOURCE_ROOT; };
+		265CA7872A456117005CADA8 /* BankCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
+		2682B0D82A46E31200E52C66 /* ConnectedAccountsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedAccountsCard.swift; sourceTree = "<group>"; };
+		2682B0DA2A46E5F500E52C66 /* ConnectedBankSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedBankSections.swift; sourceTree = "<group>"; };
 		428797192A4036F30018869A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		42E79F632A3E3857003B4482 /* sogmc3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sogmc3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E79F662A3E3857003B4482 /* sogmc3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sogmc3App.swift; sourceTree = "<group>"; };
@@ -36,6 +44,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		267CDF922A46DD1A007C7711 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				267CDF932A46DD53007C7711 /* Presenters */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		267CDF932A46DD53007C7711 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				267CDF952A46DD6A007C7711 /* Views */,
+				267CDF942A46DD5C007C7711 /* Components */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		267CDF942A46DD5C007C7711 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				265CA7872A456117005CADA8 /* BankCard.swift */,
+				2682B0D82A46E31200E52C66 /* ConnectedAccountsCard.swift */,
+				2682B0DA2A46E5F500E52C66 /* ConnectedBankSections.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		267CDF952A46DD6A007C7711 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				265CA7852A4454D3005CADA8 /* ProfileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		4239443F2A3E3AFD00E5F23E /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +116,7 @@
 		423944432A3E3B3500E5F23E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				267CDF922A46DD1A007C7711 /* Profile */,
 				428797152A40367A0018869A /* Home */,
 			);
 			path = Features;
@@ -255,9 +299,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2682B0DB2A46E5F500E52C66 /* ConnectedBankSections.swift in Sources */,
 				4287971A2A4036F30018869A /* TabBar.swift in Sources */,
+				265CA7882A456117005CADA8 /* BankCard.swift in Sources */,
+				2682B0D92A46E31200E52C66 /* ConnectedAccountsCard.swift in Sources */,
 				139FEA522A41EDBA004FB05D /* Color+Theme.swift in Sources */,
 				42E79F692A3E3857003B4482 /* ContentView.swift in Sources */,
+				265CA7862A4454D3005CADA8 /* ProfileView.swift in Sources */,
 				42E79F672A3E3857003B4482 /* sogmc3App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
