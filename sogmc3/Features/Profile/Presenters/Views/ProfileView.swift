@@ -74,6 +74,7 @@ struct ProfileView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         // TODO: add background main color
+//        .background(Color.Background.main)
     }
 }
 
