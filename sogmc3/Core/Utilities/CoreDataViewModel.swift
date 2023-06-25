@@ -30,7 +30,6 @@ class CoreDataViewModel: ObservableObject{
         getEWallet()
     }
     
-   // MARK: ADD ENTITY
     //User
     func addUser(username: String, income: Int64){
         let user = UserEntity(context: manager.context)
@@ -49,11 +48,17 @@ class CoreDataViewModel: ObservableObject{
         }
     }
     
+    func editIncome(entity: UserEntity, editIncome: Int64){
+        let currentIncome = entity.userIncome
+        let newIncome = editIncome
+        entity.userIncome = newIncome
+        save()
+    }
+    
     // Budget Method
     func addBudgetMethod(budgetMethod: String){
         let budget = BudgetMethodEntity(context: manager.context)
         budget.budgetMethodName = budgetMethod
-        
         save()
     }
     
@@ -134,7 +139,7 @@ class CoreDataViewModel: ObservableObject{
     }
     
     // Transaction
-    func addTransaction(transactionName: String, transactionAmount: Int64){
+    func addTransaction(transactionName: String, transactionAmount: Int64, transactionTypes: String?){
         let trans = TransactionEntity(context: manager.context)
         trans.transactionaName = transactionName
         trans.transactionDate = Date()
