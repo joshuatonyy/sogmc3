@@ -72,6 +72,9 @@ struct ProfileView: View {
                 .padding(.top, 10)
                 .padding(.leading, 15)
             }
+            .sheet(isPresented: $showModalIncome){
+                EditIncomeSheetView(showNewScreen: $showModalIncome)
+            }
                         
             Button (action: {
                 showModalReminder.toggle()
@@ -94,22 +97,9 @@ struct ProfileView: View {
                 .padding(.top, 10)
                 .padding(.leading, 15)
             }
-
-            // MARK: modal view cases
-            ZStack {
-                if showModalIncome {
-                    EditIncomeSheetView(showNewScreen: $showModalIncome)
-                        .transition(.move(edge: .bottom))
-                        .animation(.spring())
-                } else if showModalReminder {
-                    SetReminderView(showNewScreen: $showModalReminder)
-                        .transition(.move(edge: .bottom))
-                        .animation(.spring())
-
-                }
+            .sheet(isPresented: $showModalReminder){
+                SetReminderView(showNewScreen: $showModalReminder)
             }
-            .zIndex(2.0)
-
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .background(Color.Background.main)

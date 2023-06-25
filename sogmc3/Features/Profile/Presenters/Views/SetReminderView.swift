@@ -11,24 +11,32 @@ struct SetReminderView: View {
     @Binding var showNewScreen: Bool
 
     var body: some View {
-        VStack{
+        VStack (alignment: .leading){
             Button {
                 showNewScreen = false
             } label: {
                 HStack {
-                    Image(systemName: "xmark")
+                    Image(systemName: "chevron.backward")
                     Text("Back")
+                    Spacer()
                 }
             }
             
             Text("Set reminder")
-                .font(.title)
+                .font(.system(size: 34, weight: .bold))
+                .foregroundColor(Color.Neutral.s10)
                 .padding()
-            
+                
         }
-        .edgesIgnoringSafeArea(.all)
+        .padding(10)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .background(Color.Neutral.s70)
+        
+        // TODO: color apply guide doesnt exist
+        .background(Color.Main.s70)
+        
+        .presentationDragIndicator(.visible)
+        .presentationDetents([.fraction(0.8), .large])
+
         .gesture(DragGesture().onEnded { value in
             if value.translation.height > 50 { // Adjust the threshold as needed
                 showNewScreen = false
