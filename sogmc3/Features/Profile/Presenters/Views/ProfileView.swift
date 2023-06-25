@@ -25,8 +25,8 @@ class ProfileViewModel: ObservableObject {
 // TODO: change all font color
 struct ProfileView: View {
     @StateObject var profileVM = ProfileViewModel()
-    @State private var showModalIncome = false
-    @State private var showModalReminder = false
+    @State private var showModalIncome: Bool = false
+    @State private var showModalReminder: Bool = false
     
     var body: some View {
         VStack{
@@ -50,9 +50,10 @@ struct ProfileView: View {
                 .padding(.top, 10)
             
             Button (action: {
-                // Button action code
-                print("Button tapped")
-                showModalIncome = true
+                withAnimation{
+                    showModalIncome.toggle()
+                    showModalReminder = false
+                }
             }) {
                 HStack{
                     ZStack{
@@ -71,15 +72,10 @@ struct ProfileView: View {
                 .padding(.top, 10)
                 .padding(.leading, 15)
             }
-            .sheet(isPresented: $showModalIncome) {
-                EditIncomeSheetView()
-            }
-
-            
+                        
             Button (action: {
-                // Button action code
-                print("Button tapped")
-                showModalIncome = true
+                showModalReminder.toggle()
+                showModalIncome = false
 
             }){
                 HStack{
@@ -98,9 +94,21 @@ struct ProfileView: View {
                 .padding(.top, 10)
                 .padding(.leading, 15)
             }
-            .sheet(isPresented: $showModalReminder) {
-                SetReminderView()
+
+            // MARK: modal view cases
+            ZStack {
+                if showModalIncome {
+                    EditIncomeSheetView(showNewScreen: $showModalIncome)
+                        .transition(.move(edge: .bottom))
+                        .animation(.spring())
+                } else if showModalReminder {
+                    SetReminderView(showNewScreen: $showModalReminder)
+                        .transition(.move(edge: .bottom))
+                        .animation(.spring())
+
+                }
             }
+            .zIndex(2.0)
 
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
