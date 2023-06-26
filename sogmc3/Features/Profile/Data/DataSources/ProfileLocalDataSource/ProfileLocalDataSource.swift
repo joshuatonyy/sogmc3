@@ -13,7 +13,7 @@ struct ProfileLocalDataSource: ProfileLocalDataSourceProtocol, KeychainClient {
         try save(accessToken, service: "public-access-token", account: "brick")
     }
     
-    func saveUserAccessToken(_ accessToken: String, forBankID bankID: Int) throws {
+    func saveUserAccessToken(_ accessToken: String, forBankID bankID: String) throws {
         try save(accessToken, service: "user-access-token", account: "brick:\(bankID)")
     }
     
@@ -21,7 +21,7 @@ struct ProfileLocalDataSource: ProfileLocalDataSourceProtocol, KeychainClient {
         try read(service: "public-access-token", account: "brick", type: String.self)
     }
     
-    func readUserAccessToken(for bankID: Int) throws -> String {
+    func readUserAccessToken(for bankID: String) throws -> String {
         try read(service: "user-access-token", account: "brick:\(bankID)", type: String.self)
     }
     
