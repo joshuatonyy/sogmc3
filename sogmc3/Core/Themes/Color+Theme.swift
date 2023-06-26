@@ -22,6 +22,9 @@ extension Color {
         static let s80 = Color("main-80")
         static let s90 = Color("main-90")
         static let s100 = Color("main-100")
+        
+//        static let mainBackground = Color("mainBackground")
+//        static let mainCard = Color("mainCard")
     }
     
     struct Neutral {
@@ -57,6 +60,14 @@ extension Color {
         static let s100 = Color("neutral-100")
     }
     
+    struct Background {
+        static let main = Color("background-main")
+    }
+    
+    struct CardColor {
+        static let main = Color("cardColor-main")
+    }
+    
     struct Semantic {
         
         struct Success {
@@ -74,7 +85,7 @@ extension Color {
         struct Danger {
             static let main = Color("danger-main")
         }
-        
+  
     }
     
 }

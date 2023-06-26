@@ -23,9 +23,7 @@ struct TabBar: View {
                 switch selectedMenu {
                 case 0:
                     NavigationView {
-                        VStack {
-                            Text("1st") //change to home menu
-                        }
+                        HomeView()
                     }
                 case 1:
                     NavigationView {
