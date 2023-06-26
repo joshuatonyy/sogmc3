@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RemainingBalanceComponent: View {
-    @ObservedObject var homeVM: HomeViewModel
+    @ObservedObject var homeVM: MockHomeViewModel
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -24,7 +24,13 @@ struct RemainingBalanceComponent: View {
                 Spacer()
                 
                 Button {
+                    //get the API Data
                     print("Refresh Page")
+                    
+                    //recalculate the spendratio
+                    withAnimation(.easeIn(duration: 1.8)) {
+//                        homeVM.spendRatio = 0.84
+                    }
                 } label: {
                     Image("Refresh")
                         .resizable()
@@ -41,7 +47,7 @@ struct RemainingBalanceComponent: View {
 
 struct RemainingBalanceComponent_Previews: PreviewProvider {
     static var previews: some View {
-        RemainingBalanceComponent(homeVM: HomeViewModel())
+        RemainingBalanceComponent(homeVM: MockHomeViewModel())
             .background(.black)
     }
 }

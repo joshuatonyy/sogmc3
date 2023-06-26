@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabBar()
+        TabBar2()
             .task {
                 let service = ProfileRemoteDataSource()
                 let result = await service.getPublicAccessToken()

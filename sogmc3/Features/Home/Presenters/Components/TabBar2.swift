@@ -14,35 +14,33 @@ struct TabBar2: View {
     let iconsname_placeholder = ["Dashboard", "Transaction", "Report"]
     
     var body: some View {
-        VStack{
-//            ZStack{
-//                switch selectedMenu {
-//                case 0:
+        VStack(spacing: 0){
+            ZStack{
+                switch selectedMenu {
+                case 0:
 //                    NavigationView {
-//                        VStack {
-//                            Text("1st") //change to home menu
-//                        }
+                        HomeView()
 //                    }
-//                case 1:
-//                    NavigationView {
-//                        VStack {
-//                            Text("2nd") //change to transaction menu
-//                        }
-//                    }
-//                case 2:
-//                    NavigationView {
-//                        VStack {
-//                            Text("3rd") //change to input menu
-//                        }
-//                    }
-//                default:
-//                    NavigationView {
-//                        VStack {
-//                            Text("Default")
-//                        }
-//                    }
-//                }
-//            }
+                case 1:
+                    NavigationView {
+                        VStack {
+                            Text("2nd") //change to transaction menu
+                        }
+                    }
+                case 2:
+                    NavigationView {
+                        VStack {
+                            Text("3rd") //change to input menu
+                        }
+                    }
+                default:
+                    NavigationView {
+                        VStack {
+                            Text("Default")
+                        }
+                    }
+                }
+            }
             
             Divider()
 

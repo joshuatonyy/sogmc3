@@ -85,4 +85,10 @@ extension Color {
         
     }
     
+    struct CategoryColor {
+        static let blue = Color("categoryColor-blue")
+        static let green = Color("categoryColor-green")
+        static let red = Color("categoryColor-red")
+    }
+    
 }

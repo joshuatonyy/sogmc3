@@ -8,56 +8,82 @@
 import SwiftUI
 
 //MARK: DUMMY HOME VM
-class HomeViewModel: ObservableObject {
-    @Published var spend: Double = 12_000
+class MockHomeViewModel: ObservableObject {
+    @Published var spend: Double = 203_000
     @Published var budget: Double = 400_000
+    @Published var isNotificationExist = false
+    @Published var spendRatio: Double = 0.0
 }
-
 
 //MARK: DUMMY TOP SPENDING VM & CLASS SUBCATEGORY
-
-class SubCategory: Identifiable {
+class MockSubCategoryModel: Identifiable {
     var subCatID = UUID()
     var subCatName: String = ""
-    var subCatImage: String = ""
     var subCatPercentage: Double = 0.0
     var subCatTotalPrice: Double = 0.0
+    var categoryName: String = "Needs"
+    var categoryColor: Color = Color.CategoryColor.blue
     
-    init(subCatID: UUID = UUID(), subCatName: String, subCatImage: String, subCatPercentage: Double, subCatTotalPrice: Double) {
+    init(subCatID: UUID = UUID(), subCatName: String, subCatPercentage: Double, subCatTotalPrice: Double, categoryName: String, categoryColor: Color) {
         self.subCatID = subCatID
         self.subCatName = subCatName
-        self.subCatImage = subCatImage
         self.subCatPercentage = subCatPercentage
         self.subCatTotalPrice = subCatTotalPrice
+        self.categoryName = categoryName
+        self.categoryColor = categoryColor
     }
-    
 }
 
 
-class TopSpendingViewModel: ObservableObject {
-    @Published var topSpendingCategory: [SubCategory] = [
-        SubCategory(subCatName: "Food and Beverage", subCatImage: "belomada", subCatPercentage: 12, subCatTotalPrice: 12_000),
-        SubCategory(subCatName: "Transportation", subCatImage: "belomada", subCatPercentage: 58, subCatTotalPrice: 400_000),
-        SubCategory(subCatName: "Travel", subCatImage: "belomada", subCatPercentage: 82, subCatTotalPrice: 400_000),
-        SubCategory(subCatName: "Groceries", subCatImage: "belomada", subCatPercentage: 88, subCatTotalPrice: 123_000)
+class MockTopSpendingViewModel: ObservableObject {
+    @Published var topSpendingCategory: [MockSubCategoryModel] = [
+        MockSubCategoryModel(subCatName: "Saving", subCatPercentage: 12, subCatTotalPrice: 12_000, categoryName: "Others", categoryColor: Color.CategoryColor.green),
+        MockSubCategoryModel(subCatName: "Shopping", subCatPercentage: 58, subCatTotalPrice: 400_000, categoryName: "Wants", categoryColor: Color.CategoryColor.red),
+        MockSubCategoryModel(subCatName: "Membership", subCatPercentage: 82, subCatTotalPrice: 400_000, categoryName: "Wants", categoryColor: Color.CategoryColor.red),
+        MockSubCategoryModel(subCatName: "Food and Beverage", subCatPercentage: 88, subCatTotalPrice: 123_000, categoryName: "Needs", categoryColor: Color.CategoryColor.blue)
     ]
     
-    @State var pickerrr: String = "Weekly"
+    @Published var pickerrr: String = "Weekly"
+    
+    @Published var icons: [String: String] = [
+        "Saving": "💸",
+        "Name" : "👋",
+        "Food and Beverage": "🍛",
+        "Transportation": "🚗",
+        "Utilities": "🔋",
+        "Family": "👨‍👩‍👧‍👦",
+        "Entertainment": "🎬",
+        "Travel": "🛫",
+        "Membership": "💳",
+        "Shopping": "🛍️",
+        "Transaction": "🔺",
+        "Housing": "🏠",
+        "Insurance": "🛡️",
+        "Groceries": "🛒",
+        "Internet": "🌐",
+        "Education": "📚",
+        "Personal Care": "🧴",
+        "Basic Clothing": "👕",
+        "Dining out": "🍽️",
+        "Emergency Fund": "⚠️",
+        "Special Event": "🎉",
+        "Electronics": "💻",
+        "Investment": "💰",
+        "Home Decor and Furnishing": "🏞️"
+    ]
     
 }
 
 
 struct HomeView: View {
-    @StateObject var homeVM = HomeViewModel()
-    @StateObject var topSpendVM = TopSpendingViewModel()
-    
-    @State var isNotificationExist = true
+    @StateObject var homeVM = MockHomeViewModel()
+    @StateObject var topSpendVM = MockTopSpendingViewModel()
     
     var body: some View {
         VStack(alignment: .leading) {
             
             HStack {
-                Text("Hi, Nama 👋")
+                Text("Hi, Jihan 👋")
                     .font(.title)
                     .bold()
                     .foregroundColor(.white)
@@ -65,6 +91,7 @@ struct HomeView: View {
                 
                 Spacer()
                 
+                //MARK: Profile and Receipt
                 HStack {
                     //MARK: Profile
                     Button {
@@ -75,7 +102,7 @@ struct HomeView: View {
                                 .resizable()
                                 .frame(width: 24, height: 24)
                             
-                            if isNotificationExist {
+                            if homeVM.isNotificationExist {
                                 Color.red
                                     .frame(width: 10, height: 10)
                                     .clipShape(Circle())
@@ -87,7 +114,7 @@ struct HomeView: View {
                     
                     //MARK: Notification
                     Button {
-//                        print("Show Profile Page")
+                        print("Show Profile Page")
 //                        ProfileView()
                     }label: {
                         Image(systemName: "person.crop.circle")
@@ -101,7 +128,7 @@ struct HomeView: View {
             
             
             DashboardCardComponent(homeVM: homeVM)
-                .frame(width: 358, height: 143)
+                .frame(width: 358, height: homeVM.isNotificationExist ? 175 : 143)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
             
             TopSpendingComponent(topSpendVM: topSpendVM)

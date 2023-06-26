@@ -9,26 +9,21 @@ import SwiftUI
 
 struct TopSpendingListCardComponent: View {
     
-    var subCategory: SubCategory
+    var subCategory: MockSubCategoryModel
+    var icon: String
     
     var body: some View {
         HStack {
             //MARK: Category Image
-            
             ZStack {
-                Color.blue
+                subCategory.categoryColor
                 
-                Text("🍛")
+                Text(icon)
             }
             .frame(width: 48, height: 48)
             .clipShape(Circle())
-            
-//            Image("fnb")
-////            Image(systemName: "photo.circle.fill")
-//                .resizable()
-//                .frame(width: 48, height: 48)
-            
-            
+            .padding(.trailing, 15)
+
             //MARK: Category Name & Price
             VStack(alignment: .leading) {
                 Text(subCategory.subCatName)
@@ -44,12 +39,12 @@ struct TopSpendingListCardComponent: View {
             Text("\(String(format: "%.f", subCategory.subCatPercentage))%")
                 .font(.caption)
         }
-        .padding()
+        .padding(.bottom, 10)
     }
 }
 
-struct TopSpendingListCardComponent_Previews: PreviewProvider {
-    static var previews: some View {
-        TopSpendingListCardComponent(subCategory: SubCategory(subCatName: "Food and Beverage", subCatImage: "belomada", subCatPercentage: 12, subCatTotalPrice: 12_000))
-    }
-}
+//struct TopSpendingListCardComponent_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TopSpendingListCardComponent(subCategory: MockSubCategoryModel(subCatName: "Food and Beverage", subCatPercentage: 12, subCatTotalPrice: 12_000), icon: "☺️", )
+//    }
+//}

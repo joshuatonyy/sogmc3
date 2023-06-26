@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TopSpendingComponent: View {
-    @ObservedObject var topSpendVM: TopSpendingViewModel
+    @ObservedObject var topSpendVM: MockTopSpendingViewModel
     
     var body: some View {
         VStack(alignment: .center) {
@@ -18,14 +18,16 @@ struct TopSpendingComponent: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             
-            PickerTopSpendingComponent()
+            PickerTopSpendingComponent(topSpendVM: _topSpendVM)
                 .padding(.bottom, 10)
             
             Divider()
                 .overlay(Color.Neutral.s90)
             
-            ForEach(topSpendVM.topSpendingCategory) { subCategory in
-                TopSpendingListCardComponent(subCategory: subCategory)
+            ScrollView {
+                ForEach(topSpendVM.topSpendingCategory) { subCategory in
+                    TopSpendingListCardComponent(subCategory: subCategory, icon: topSpendVM.icons[subCategory.subCatName]!)
+                }
             }
             
         }
@@ -35,7 +37,7 @@ struct TopSpendingComponent: View {
 
 struct TopSpendingComponent_Previews: PreviewProvider {
     static var previews: some View {
-        TopSpendingComponent(topSpendVM: TopSpendingViewModel())
+        TopSpendingComponent(topSpendVM: MockTopSpendingViewModel())
             .background(Color.Background.main)
     }
 }
