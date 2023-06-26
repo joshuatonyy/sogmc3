@@ -88,7 +88,7 @@ struct HomeView: View {
                     //MARK: Notification
                     Button {
 //                        print("Show Profile Page")
-                        ProfileView()
+//                        ProfileView()
                     }label: {
                         Image(systemName: "person.crop.circle")
                             .resizable()
