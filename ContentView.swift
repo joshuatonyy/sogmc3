@@ -9,17 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabBar()
-            .task {
-                let service = ProfileRemoteDataSource()
-                let result = await service.getPublicAccessToken()
-                switch result {
-                case .success(let success):
-                    dump(success)
-                case .failure(let failure):
-                    dump(failure)
-                }
-            }
+        BrickDebugView()
     }
 }
 
