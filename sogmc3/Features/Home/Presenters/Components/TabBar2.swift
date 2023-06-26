@@ -10,40 +10,11 @@ import SwiftUI
 struct TabBar2: View {
     @State var selectedMenu = 0
     
-    let iconsPlaceholder = ["house.fill", "dollarsign.arrow.circlepath", "chart.bar.xaxis"]
+    let iconsPlaceholder = ["house.fill", "arrow.left.arrow.right", "chart.bar.xaxis"]
     let iconsname_placeholder = ["Dashboard", "Transaction", "Report"]
     
     var body: some View {
-        VStack{
-//            ZStack{
-//                switch selectedMenu {
-//                case 0:
-//                    NavigationView {
-//                        VStack {
-//                            Text("1st") //change to home menu
-//                        }
-//                    }
-//                case 1:
-//                    NavigationView {
-//                        VStack {
-//                            Text("2nd") //change to transaction menu
-//                        }
-//                    }
-//                case 2:
-//                    NavigationView {
-//                        VStack {
-//                            Text("3rd") //change to input menu
-//                        }
-//                    }
-//                default:
-//                    NavigationView {
-//                        VStack {
-//                            Text("Default")
-//                        }
-//                    }
-//                }
-//            }
-            
+        VStack{            
             Divider()
 
             HStack{

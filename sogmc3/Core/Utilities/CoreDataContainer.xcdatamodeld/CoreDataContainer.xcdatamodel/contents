@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22F66" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BudgetMethodEntity" representedClassName="BudgetMethodEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="budgetMethodName" optional="YES" attributeType="String"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CategoryEntity" inverseName="budgets" inverseEntity="CategoryEntity"/>
+        <relationship name="users" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserEntity" inverseName="budgets" inverseEntity="UserEntity"/>
+    </entity>
+    <entity name="CategoryEntity" representedClassName="CategoryEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="categoryName" optional="YES" attributeType="String"/>
+        <attribute name="categoryPercentage" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="budgets" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BudgetMethodEntity" inverseName="categories" inverseEntity="BudgetMethodEntity"/>
+        <relationship name="subcategories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SubCategoryEntity" inverseName="categories" inverseEntity="SubCategoryEntity"/>
+    </entity>
+    <entity name="EWalletEntity" representedClassName="EWalletEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="walletTypeName" optional="YES" attributeType="String"/>
+        <relationship name="users" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserEntity" inverseName="ewallets" inverseEntity="UserEntity"/>
+    </entity>
+    <entity name="SubCategoryEntity" representedClassName="SubCategoryEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="subCategoryIcon" optional="YES" attributeType="String"/>
+        <attribute name="subCategoryName" optional="YES" attributeType="String"/>
+        <relationship name="categories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CategoryEntity" inverseName="subcategories" inverseEntity="CategoryEntity"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TransactionEntity" inverseName="subcategories" inverseEntity="TransactionEntity"/>
+    </entity>
+    <entity name="TransactionEntity" representedClassName="TransactionEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="transactionAmount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="transactionaName" optional="YES" attributeType="String"/>
+        <attribute name="transactionDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="subcategories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SubCategoryEntity" inverseName="transactions" inverseEntity="SubCategoryEntity"/>
+        <relationship name="transactiontypes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TransactionTypeEntity" inverseName="transactions" inverseEntity="TransactionTypeEntity"/>
+        <relationship name="users" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserEntity" inverseName="transactions" inverseEntity="UserEntity"/>
+    </entity>
+    <entity name="TransactionTypeEntity" representedClassName="TransactionTypeEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="transactionTypeName" optional="YES" attributeType="String"/>
+        <relationship name="transactions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TransactionEntity" inverseName="transactiontypes" inverseEntity="TransactionEntity"/>
+    </entity>
+    <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="userID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="userIncome" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
+        <relationship name="budgets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BudgetMethodEntity" inverseName="users" inverseEntity="BudgetMethodEntity"/>
+        <relationship name="ewallets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EWalletEntity" inverseName="users" inverseEntity="EWalletEntity"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TransactionEntity" inverseName="users" inverseEntity="TransactionEntity"/>
+    </entity>
+</model>
