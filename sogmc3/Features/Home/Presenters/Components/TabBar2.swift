@@ -12,15 +12,27 @@ struct TabBar2: View {
     
     let iconsPlaceholder = ["house.fill", "dollarsign.arrow.circlepath", "chart.bar.xaxis"]
     let iconsname_placeholder = ["Dashboard", "Transaction", "Report"]
+    @StateObject var homeVM = MockHomeViewModel()
     
     var body: some View {
         VStack(spacing: 0){
             ZStack{
                 switch selectedMenu {
                 case 0:
-//                    NavigationView {
-                        HomeView()
-//                    }
+                    NavigationStack {
+                        ZStack {
+                            HomeView(homeVM: homeVM)
+                            
+                            if homeVM.isShowDimmedView {
+                                //MARK: Dimmed View
+                               DimmedViewComponent(homeVM: homeVM)
+                                
+                                //MARK: Showing Information
+                                WarningInformationComponent()
+                                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                            }
+                        }
+                    }
                 case 1:
                     NavigationView {
                         VStack {
@@ -42,25 +54,25 @@ struct TabBar2: View {
                 }
             }
             
-            Divider()
-
+            //            Divider()
+            
             HStack{
-
+                
                 ForEach(0..<3, id: \.self) { number in
                     Spacer()
                     Button(action: {
                         self.selectedMenu = number
                     }, label: {
-                            VStack{
-                                Image(systemName: iconsPlaceholder[number])
-                                    .resizable()
-                                    .frame(width: 24, height: 21)
-                                    .foregroundColor(selectedMenu == number ? .blue : Color(UIColor.lightGray))
-                                Text(iconsname_placeholder[number])
-                                    .font(.system(size: 10))
-                                    .foregroundColor(selectedMenu == number ? .blue : Color(UIColor.lightGray))
-                            }
-                            .padding(.bottom, 15)
+                        VStack{
+                            Image(systemName: iconsPlaceholder[number])
+                                .resizable()
+                                .frame(width: 24, height: 21)
+                                .foregroundColor(selectedMenu == number ? .blue : Color(UIColor.lightGray))
+                            Text(iconsname_placeholder[number])
+                                .font(.system(size: 10))
+                                .foregroundColor(selectedMenu == number ? .blue : Color(UIColor.lightGray))
+                        }
+                        .padding(.bottom, 15)
                     })
                     Spacer()
                 }

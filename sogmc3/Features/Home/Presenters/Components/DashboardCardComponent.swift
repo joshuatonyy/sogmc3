@@ -27,7 +27,6 @@ struct DashboardCardComponent: View {
                     
                 
                 if homeVM.isNotificationExist {
-//                    exclamationmark.triangle
                     Text("\(Image(systemName: "exclamationmark.triangle")) To update the data, please categorize your spendings")
                         .foregroundColor(Color.Semantic.Danger.main)
                         .font(.caption)

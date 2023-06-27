@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ProgressBarHomeComponent: View {
     @ObservedObject var homeVM: MockHomeViewModel
-    
-    
     var body: some View {
         
         VStack(alignment: .leading) {
