@@ -39,6 +39,17 @@ struct EditIncomeSheetView: View {
                 .foregroundColor(Color.Neutral.s10)
                 .padding()
             
+            Text("will be calculated for the monthly budget")
+                .font(.caption)
+                .foregroundColor(Color.Neutral.s50)
+                .padding([.top, .leading], 5)
+            
+            Divider()
+                .frame(height: 2)
+                .overlay(Color.Neutral.s80)
+                .padding()
+
+            
             HStack{
                 Text("Rp")
                     .font(.system(size: 17, weight: .semibold))

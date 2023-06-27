@@ -22,6 +22,8 @@
 		139FEAA92A452241004FB05D /* ProfileLocalDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEAA82A452241004FB05D /* ProfileLocalDataSourceProtocol.swift */; };
 		139FEAAC2A452281004FB05D /* ProfileRemoteDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEAAB2A452281004FB05D /* ProfileRemoteDataSourceProtocol.swift */; };
 		139FEAAE2A452315004FB05D /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEAAD2A452315004FB05D /* ProfileRepository.swift */; };
+		2624581D2A49D901008D9FB0 /* TimePickerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2624581C2A49D901008D9FB0 /* TimePickerComponent.swift */; };
+		2624581F2A4ADC5D008D9FB0 /* TimeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2624581E2A4ADC5D008D9FB0 /* TimeComponent.swift */; };
 		264641592A47619800F56182 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264641582A47619800F56182 /* ProfileView.swift */; };
 		2646415D2A4761D400F56182 /* ConnectedAccountsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2646415C2A4761D400F56182 /* ConnectedAccountsCard.swift */; };
 		2646415F2A4761DF00F56182 /* BankCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2646415E2A4761DF00F56182 /* BankCard.swift */; };
@@ -33,6 +35,7 @@
 		26D7ED582A49A8C600DA9C8B /* CoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D7ED552A49A8C600DA9C8B /* CoreDataViewModel.swift */; };
 		26D7ED5F2A49BBFE00DA9C8B /* TransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D7ED5C2A49BBFE00DA9C8B /* TransactionList.swift */; };
 		26D7ED602A49BBFE00DA9C8B /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D7ED5E2A49BBFE00DA9C8B /* TransactionView.swift */; };
+		26FC90902A49CFFA00146A4C /* ReminderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FC908F2A49CFFA00146A4C /* ReminderModel.swift */; };
 		4287971A2A4036F30018869A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428797192A4036F30018869A /* TabBar.swift */; };
 		4287974C2A4578750018869A /* TabBar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4287974B2A4578750018869A /* TabBar2.swift */; };
 		42E79F672A3E3857003B4482 /* sogmc3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E79F662A3E3857003B4482 /* sogmc3App.swift */; };
@@ -64,6 +67,8 @@
 		139FEAA82A452241004FB05D /* ProfileLocalDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLocalDataSourceProtocol.swift; sourceTree = "<group>"; };
 		139FEAAB2A452281004FB05D /* ProfileRemoteDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRemoteDataSourceProtocol.swift; sourceTree = "<group>"; };
 		139FEAAD2A452315004FB05D /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
+		2624581C2A49D901008D9FB0 /* TimePickerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerComponent.swift; sourceTree = "<group>"; };
+		2624581E2A4ADC5D008D9FB0 /* TimeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeComponent.swift; sourceTree = "<group>"; };
 		264641582A47619800F56182 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2646415C2A4761D400F56182 /* ConnectedAccountsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedAccountsCard.swift; sourceTree = "<group>"; };
 		2646415E2A4761DF00F56182 /* BankCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
@@ -75,6 +80,7 @@
 		26D7ED552A49A8C600DA9C8B /* CoreDataViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataViewModel.swift; sourceTree = "<group>"; };
 		26D7ED5C2A49BBFE00DA9C8B /* TransactionList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionList.swift; sourceTree = "<group>"; };
 		26D7ED5E2A49BBFE00DA9C8B /* TransactionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		26FC908F2A49CFFA00146A4C /* ReminderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModel.swift; sourceTree = "<group>"; };
 		428797192A4036F30018869A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		4287974B2A4578750018869A /* TabBar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar2.swift; sourceTree = "<group>"; };
 		42E79F632A3E3857003B4482 /* sogmc3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sogmc3.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +147,7 @@
 		139FEA992A4487D5004FB05D /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				26FC908C2A49CBB000146A4C /* Model */,
 				139FEA9A2A4487EB004FB05D /* DataSources */,
 				139FEAAF2A452319004FB05D /* Repositories */,
 				139FEA9D2A448971004FB05D /* ProfileEndpoint.swift */,
@@ -213,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				2646415C2A4761D400F56182 /* ConnectedAccountsCard.swift */,
+				2624581C2A49D901008D9FB0 /* TimePickerComponent.swift */,
+				2624581E2A4ADC5D008D9FB0 /* TimeComponent.swift */,
 				2646415E2A4761DF00F56182 /* BankCard.swift */,
 				264641612A4761F400F56182 /* ConnectedBankSections.swift */,
 			);
@@ -270,6 +279,14 @@
 				26D7ED5E2A49BBFE00DA9C8B /* TransactionView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		26FC908C2A49CBB000146A4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				26FC908F2A49CFFA00146A4C /* ReminderModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4239443F2A3E3AFD00E5F23E /* Config */ = {
@@ -537,10 +554,13 @@
 				8067AD562A42B117009085C2 /* DashboardCardComponent.swift in Sources */,
 				139FEA942A447958004FB05D /* HTTPClient.swift in Sources */,
 				139FEAA92A452241004FB05D /* ProfileLocalDataSourceProtocol.swift in Sources */,
+				2624581D2A49D901008D9FB0 /* TimePickerComponent.swift in Sources */,
+				2624581F2A4ADC5D008D9FB0 /* TimeComponent.swift in Sources */,
 				26D7ED562A49A8C600DA9C8B /* CoreDataManager.swift in Sources */,
 				4287974C2A4578750018869A /* TabBar2.swift in Sources */,
 				26D7ED602A49BBFE00DA9C8B /* TransactionView.swift in Sources */,
 				139FEA8B2A443E67004FB05D /* AuthResponse.swift in Sources */,
+				26FC90902A49CFFA00146A4C /* ReminderModel.swift in Sources */,
 				139FEAA02A45117A004FB05D /* ProfileLocalDataSource.swift in Sources */,
 				139FEA972A44868C004FB05D /* URLRequest+initFromEndpoint.swift in Sources */,
 				139FEAA32A4512B2004FB05D /* KeychainClient.swift in Sources */,
