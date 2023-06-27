@@ -19,36 +19,24 @@ extension View {
 }
 
 struct EditIncomeSheetView: View {
-    @Binding var showNewScreen: Bool
     @State private var updatedIncome: String = ""
     
     var body: some View {
         VStack (alignment: .leading){
-            Button {
-                showNewScreen = false
-            } label: {
-                HStack {
-                    Image(systemName: "chevron.backward")
-                    Text("Back")
-                    Spacer()
-                }
-            }
-
             Text("Edit Income")
-                .font(.system(size: 34, weight: .bold))
-                .foregroundColor(Color.Neutral.s10)
+                .font(.system(size: 28, weight: .bold))
+                .foregroundColor(Color.Neutral.s20)
                 .padding()
             
             Text("will be calculated for the monthly budget")
                 .font(.caption)
                 .foregroundColor(Color.Neutral.s50)
-                .padding([.top, .leading], 5)
+                .padding(.leading, 15)
             
             Divider()
                 .frame(height: 2)
                 .overlay(Color.Neutral.s80)
-                .padding()
-
+                .padding([.bottom, .leading, .trailing], 15)
             
             HStack{
                 Text("Rp")
@@ -86,20 +74,5 @@ struct EditIncomeSheetView: View {
         
         // TODO: color apply guide doesnt exist
         .background(Color.Main.s70)
-        
-        .presentationDragIndicator(.visible)
-        .presentationDetents([.fraction(0.8), .large])
-                
-        .gesture(DragGesture().onEnded { value in
-            if value.translation.height > 50 { // Adjust the threshold as needed
-                showNewScreen = false
-            }
-        })
     }
 }
-
-//struct EditIncomeSheetView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        EditIncomeSheetView()
-//    }
-//}

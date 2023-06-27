@@ -24,6 +24,8 @@
 		139FEAAE2A452315004FB05D /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEAAD2A452315004FB05D /* ProfileRepository.swift */; };
 		2624581D2A49D901008D9FB0 /* TimePickerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2624581C2A49D901008D9FB0 /* TimePickerComponent.swift */; };
 		2624581F2A4ADC5D008D9FB0 /* TimeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2624581E2A4ADC5D008D9FB0 /* TimeComponent.swift */; };
+		262458212A4AED80008D9FB0 /* EditIncomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262458202A4AED80008D9FB0 /* EditIncomeSection.swift */; };
+		262458232A4AEDC9008D9FB0 /* SetReminderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262458222A4AEDC9008D9FB0 /* SetReminderSection.swift */; };
 		264641592A47619800F56182 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264641582A47619800F56182 /* ProfileView.swift */; };
 		2646415D2A4761D400F56182 /* ConnectedAccountsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2646415C2A4761D400F56182 /* ConnectedAccountsCard.swift */; };
 		2646415F2A4761DF00F56182 /* BankCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2646415E2A4761DF00F56182 /* BankCard.swift */; };
@@ -69,6 +71,8 @@
 		139FEAAD2A452315004FB05D /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
 		2624581C2A49D901008D9FB0 /* TimePickerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerComponent.swift; sourceTree = "<group>"; };
 		2624581E2A4ADC5D008D9FB0 /* TimeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeComponent.swift; sourceTree = "<group>"; };
+		262458202A4AED80008D9FB0 /* EditIncomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIncomeSection.swift; sourceTree = "<group>"; };
+		262458222A4AEDC9008D9FB0 /* SetReminderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetReminderSection.swift; sourceTree = "<group>"; };
 		264641582A47619800F56182 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2646415C2A4761D400F56182 /* ConnectedAccountsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedAccountsCard.swift; sourceTree = "<group>"; };
 		2646415E2A4761DF00F56182 /* BankCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
@@ -223,6 +227,8 @@
 				2624581C2A49D901008D9FB0 /* TimePickerComponent.swift */,
 				2624581E2A4ADC5D008D9FB0 /* TimeComponent.swift */,
 				2646415E2A4761DF00F56182 /* BankCard.swift */,
+				262458202A4AED80008D9FB0 /* EditIncomeSection.swift */,
+				262458222A4AEDC9008D9FB0 /* SetReminderSection.swift */,
 				264641612A4761F400F56182 /* ConnectedBankSections.swift */,
 			);
 			path = Components;
@@ -535,6 +541,7 @@
 				264641622A4761F400F56182 /* ConnectedBankSections.swift in Sources */,
 				264641592A47619800F56182 /* ProfileView.swift in Sources */,
 				801CFC802A43F75C005E4AE2 /* HomeView.swift in Sources */,
+				262458212A4AED80008D9FB0 /* EditIncomeSection.swift in Sources */,
 				26D7ED572A49A8C600DA9C8B /* CoreDataContainer.xcdatamodeld in Sources */,
 				801CFC7C2A43F677005E4AE2 /* ProgressBarHomeComponent.swift in Sources */,
 				139FEA902A447698004FB05D /* RequestMethod.swift in Sources */,
@@ -568,6 +575,7 @@
 				2646415D2A4761D400F56182 /* ConnectedAccountsCard.swift in Sources */,
 				26D7ED582A49A8C600DA9C8B /* CoreDataViewModel.swift in Sources */,
 				8067AD5A2A42EA9D009085C2 /* RemainingBalanceComponent.swift in Sources */,
+				262458232A4AEDC9008D9FB0 /* SetReminderSection.swift in Sources */,
 				139FEAAE2A452315004FB05D /* ProfileRepository.swift in Sources */,
 				139FEA922A44773B004FB05D /* RequestError.swift in Sources */,
 				139FEA9C2A448916004FB05D /* ProfileRemoteDataSource.swift in Sources */,

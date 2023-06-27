@@ -25,84 +25,42 @@ class ProfileViewModel: ObservableObject {
 // TODO: change all font color
 struct ProfileView: View {
     @StateObject var profileVM = ProfileViewModel()
-    @State private var showModalIncome: Bool = false
-    @State private var showModalReminder: Bool = false
     
     var body: some View {
-        VStack{
-            HStack{
-                Image(systemName: "person.circle.fill")
-                    .font(.system(size: 56))
-                    .foregroundColor(Color.Neutral.s40)
-                    .symbolRenderingMode(.monochrome)
-
-                Text("\(profileVM.username)")
-                    .fontWeight(.semibold)
-                    .font(.system(size: 17))
-                    .foregroundColor(Color.Neutral.s10)
-                Spacer()
-            }
-            .padding(.top, 10)
-            .padding(.leading, 10)
-            
-            
-            ConnectedAccountsCard()
-                .padding(.top, 10)
-            
-            Button (action: {
-                withAnimation{
-                    showModalIncome.toggle()
-                    showModalReminder = false
-                }
-            }) {
+        NavigationView{
+            VStack{
                 HStack{
-                    ZStack{
-                        Circle()
-                            .frame(width: 32, height: 32)
-                            .foregroundColor(Color.CardColor.main)
-                        
-                        Image(systemName: "dollarsign.circle")
-                            .foregroundColor(Color.Neutral.s40)
-                            .symbolRenderingMode(.monochrome)
-                    }
-                    Text("Edit income")
+                    Image(systemName: "person.circle.fill")
+                        .font(.system(size: 56))
                         .foregroundColor(Color.Neutral.s40)
+                        .symbolRenderingMode(.monochrome)
+
+                    Text("\(profileVM.username)")
+                        .fontWeight(.semibold)
+                        .font(.system(size: 17))
+                        .foregroundColor(Color.Neutral.s10)
                     Spacer()
                 }
                 .padding(.top, 10)
-                .padding(.leading, 15)
-            }
-            .sheet(isPresented: $showModalIncome){
-                EditIncomeSheetView(showNewScreen: $showModalIncome)
-            }
-                        
-            Button (action: {
-                showModalReminder.toggle()
-                showModalIncome = false
-
-            }){
-                HStack{
-                    ZStack{
-                        Circle()
-                            .foregroundColor(Color.CardColor.main)
-                            .frame(width: 32, height: 32)
-                        Image(systemName: "bell.fill")
-                            .symbolRenderingMode(.monochrome)
-                            .foregroundColor(Color.Neutral.s40)
-                    }
-                    Text("Set reminder")
-                        .foregroundColor(Color.Neutral.s40)
-                    Spacer()
+                .padding(.leading, 10)
+                
+                
+                ConnectedAccountsCard()
+                    .padding(.top, 10)
+                
+                NavigationLink(destination: EditIncomeSheetView()) {
+                   EditIncomeSection()
                 }
-                .padding(.top, 10)
-                .padding(.leading, 15)
+                
+                NavigationLink(destination: SetReminderView()) {
+                    SetReminderSection()
+                }
             }
-            .sheet(isPresented: $showModalReminder){
-                SetReminderView(showNewScreen: $showModalReminder)
-            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            .background(Color.Background.main)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .background(Color.Background.main)
+        
+        
     }
 }
 

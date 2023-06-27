@@ -66,68 +66,47 @@ struct SetTimeComponent: View {
 
 
 struct SetReminderView: View {
-    @Binding var showNewScreen: Bool
     @State var notificationTime: Date = Date()
 
     var body: some View {
-        NavigationView{
-            VStack (alignment: .leading){
-                
-                Button {
-                    showNewScreen = false
-                } label: {
-                    HStack {
-                        Image(systemName: "chevron.backward")
-                        Text("Back")
-                        Spacer()
-                    }
-                }
-                
-                Text("Set reminder")
-                    .font(.system(size: 34, weight: .bold))
-                    .foregroundColor(Color.Neutral.s10)
-                    .padding()
-                                
-                Text("to remind you categorized your daily transaction")
-                    .font(.caption)
-                    .foregroundColor(Color.Neutral.s50)
-                    .padding([.top, .leading], 5)
-                
-                Divider()
-                    .frame(height: 2)
-                    .overlay(Color.Neutral.s80)
-                    .padding()
-                
-                Button("Change") {
-                    NotificationManager.instance.requestAuthorization()
-        //                SetTimeComponent(notificationTime: $notificationTime)
+        VStack (alignment: .leading){
+            Text("Set reminder")
+                .font(.system(size: 28, weight: .bold))
+                .foregroundColor(Color.Neutral.s10)
+                .padding()
+                            
+            Text("to remind you categorized your daily transaction")
+                .font(.caption)
+                .foregroundColor(Color.Neutral.s50)
+                .padding(.leading, 15)
+            
+            Divider()
+                .frame(height: 2)
+                .overlay(Color.Neutral.s80)
+                .padding([.bottom, .leading, .trailing], 15)
+            
+            Button("Change") {
+                NotificationManager.instance.requestAuthorization()
+    //                SetTimeComponent(notificationTime: $notificationTime)
 
-                }
-                
-                Button("Time trigger") {
-                    NotificationManager.instance.scheduleNotification()
-                }
-                
             }
-            .padding(10)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             
-            // TODO: color apply guide doesnt exist
-            .background(Color.Main.s70)
-            
-            .presentationDragIndicator(.visible)
-//            .presentationDetents([.fraction(0.5), .large])
-
-            .gesture(DragGesture().onEnded { value in
-                if value.translation.height > 50 { // Adjust the threshold as needed
-                    showNewScreen = false
-                }
-            })
-            
-            // TODO: move this, should be on input category card
-            .onAppear{
-                UIApplication.shared.applicationIconBadgeNumber = 0
+            Button("Time trigger") {
+                NotificationManager.instance.scheduleNotification()
             }
+            
+        }
+        .padding(10)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        
+        // TODO: color apply guide doesnt exist
+        .background(Color.Main.s70)
+        
+        .presentationDragIndicator(.visible)
+        
+        // TODO: move this, should be on input category card
+        .onAppear{
+            UIApplication.shared.applicationIconBadgeNumber = 0
         }
     }
 }
