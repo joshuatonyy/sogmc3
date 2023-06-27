@@ -15,7 +15,6 @@ struct TabBar2: View {
     @StateObject var homeVM = MockHomeViewModel()
     
     var body: some View {
-            Divider()
         VStack(spacing: 0){
             ZStack{
                 switch selectedMenu {
