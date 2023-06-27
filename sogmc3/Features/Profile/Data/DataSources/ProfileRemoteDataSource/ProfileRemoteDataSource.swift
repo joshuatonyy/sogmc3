@@ -11,8 +11,15 @@ struct ProfileRemoteDataSource: ProfileRemoteDataSourceProtocol, HTTPClient {
     
     func getPublicAccessToken() async -> Result<AuthResponse, RequestError> {
         await sendRequest(
-            endpoint: ProfileEndpoint.auth,
+            endpoint: ProfileEndpoint.publicAuth,
             responseModel: AuthResponse.self
+        )
+    }
+    
+    func getUserAuthTokens(for userID: String) async -> Result<AccessTokenResponse, RequestError> {
+        await sendRequest(
+            endpoint: ProfileEndpoint.userAccessToken(userID: userID),
+            responseModel: AccessTokenResponse.self
         )
     }
     

@@ -37,7 +37,8 @@ fileprivate func makeURL(from endpoint: Endpoint) -> URL? {
     var urlComponents = URLComponents()
     urlComponents.scheme = endpoint.scheme
     urlComponents.host = endpoint.host
-    urlComponents.path = "/v1\(endpoint.path)"
+    urlComponents.path = endpoint.path
+    urlComponents.queryItems = endpoint.queries
     
     return urlComponents.url
 }

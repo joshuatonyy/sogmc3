@@ -10,11 +10,12 @@ import SwiftUI
 struct TabBar2: View {
     @State var selectedMenu = 0
     
-    let iconsPlaceholder = ["house.fill", "dollarsign.arrow.circlepath", "chart.bar.xaxis"]
+    let iconsPlaceholder = ["house.fill", "arrow.left.arrow.right", "chart.bar.xaxis"]
     let iconsname_placeholder = ["Dashboard", "Transaction", "Report"]
     @StateObject var homeVM = MockHomeViewModel()
     
     var body: some View {
+            Divider()
         VStack(spacing: 0){
             ZStack{
                 switch selectedMenu {

@@ -9,4 +9,5 @@ import Foundation
 
 protocol ProfileRemoteDataSourceProtocol {
     func getPublicAccessToken() async -> Result<AuthResponse, RequestError>
+    func getUserAuthTokens(for userID: String) async -> Result<AccessTokenResponse, RequestError>
 }
