@@ -22,20 +22,16 @@ class NotificationManager{
         }
     }
     
-    func scheduleNotification() {
+    func scheduleNotification(schedule: DateComponents) {
         let content = UNMutableNotificationContent()
+        
+        // TODO: change title and subtitle customized
         content.title = "this is notif title"
         content.subtitle = "this is notif SUBTITLE"
         content.sound = .default
         content.badge = 1
-        
-        // trigger by calendar
-        // MARK: variable for set reminder
-        var dateComponents = DateComponents() // can be customized
-        dateComponents.hour = 12
-        dateComponents.minute = 57
-        
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+                
+        let trigger = UNCalendarNotificationTrigger(dateMatching: schedule, repeats: true)
         
         // MARK: push notification calendar-based trigger (date & time)
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
@@ -66,6 +62,9 @@ struct SetReminderView: View {
         
         self._notificationTime = State(wrappedValue: dateFromUserDefault)
         print("userDefault read with \(notificationTime)")
+        NotificationManager.instance.scheduleNotification(schedule: Calendar.current.dateComponents([.hour, .minute], from: notificationTime)
+)
+
     }
     
     var body: some View {
@@ -126,6 +125,9 @@ struct SetReminderView: View {
                 dateFromUserDefault = .init(timeIntervalSinceNow: 3600)
             }
             notificationTime = dateFromUserDefault
+            
+            NotificationManager.instance.scheduleNotification(schedule: Calendar.current.dateComponents([.hour, .minute], from: notificationTime))
+
         }
     }
     
