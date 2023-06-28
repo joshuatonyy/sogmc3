@@ -59,20 +59,23 @@ struct EditIncomeSheetView: View {
             Spacer()
             
             Button{
-                // action save updated income
+                // TODO: action save updated income
             } label: {
                 Text("Save")
+                    .padding(15)
                     .frame(maxWidth: .infinity)
+                    .foregroundColor(Color.Neutral.s30)
             }
-            .buttonStyle(.borderedProminent)
+            .background(
+            RoundedRectangle(cornerRadius: 12)
+                .fill(Color.Button.main)
+            )
             .padding()
             
             
         }
         .padding(10)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        
-        // TODO: color apply guide doesnt exist
-        .background(Color.Main.s70)
+        .background(Color.Background.main)
     }
 }

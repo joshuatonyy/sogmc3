@@ -15,8 +15,6 @@ struct TimePickerComponent: View {
     init(notificationTime: Binding<Date>, showTimePicker: Binding<Bool>) {
         self._notificationTime = notificationTime
         self._showTimePicker = showTimePicker
-        
-//        print("init")
     }
     
     var body: some View {
@@ -33,7 +31,6 @@ struct TimePickerComponent: View {
                 
                 Button(action: {
                     showTimePicker = false
-                    // TODO: set selection time picker to setreminderview
                     UserDefaults.standard.set(notificationTime, forKey: "notificationTime")
                     print("userDefault saved with \(notificationTime)")
 
@@ -48,14 +45,14 @@ struct TimePickerComponent: View {
                 selection: $notificationTime,
                 displayedComponents: [.hourAndMinute]
             )
+            .colorScheme(.dark)
             .datePickerStyle(.wheel)
             .labelsHidden()
             .padding()
-            
         }
         .edgesIgnoringSafeArea(.all)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .background(Color.Neutral.s70)
+        .background(Color.CardColor.main)
         .gesture(DragGesture().onEnded { value in
                 if value.translation.height > 50 { // Adjust the threshold as needed
                     showTimePicker = false

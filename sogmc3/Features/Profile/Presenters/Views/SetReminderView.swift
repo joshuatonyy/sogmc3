@@ -44,10 +44,6 @@ class NotificationManager{
     }
 }
 
-
-
-
-
 struct SetReminderView: View {
     @State private var notificationTime: Date
     @State var showTimePicker: Bool = false
@@ -89,23 +85,29 @@ struct SetReminderView: View {
                     .font(.system(.title))
                     .fontWeight(.bold)
                     .foregroundColor(Color.Neutral.s20)
+                    .padding()
+                
                 Spacer()
+                
                 Button(action: {
                     showTimePicker.toggle()
                 }) {
                     Text("Change")
-                        
+                        .padding(10)
+                        .foregroundColor(Color.Neutral.s30)
                 }
+                .background(
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(Color.Button.main)
+                )
+                .padding()
         
             }
             
         }
         .padding(10)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        
-        // TODO: color apply guide doesnt exist
-        .background(Color.Main.s70)
-        
+        .background(Color.Background.main)
         .presentationDragIndicator(.visible)
         
         // TODO: move this, should be on input category card

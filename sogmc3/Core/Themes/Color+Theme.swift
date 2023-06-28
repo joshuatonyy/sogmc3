@@ -88,4 +88,8 @@ extension Color {
   
     }
     
+    struct Button {
+        static let main = Color("button-main")
+    }
+    
 }
