@@ -23,7 +23,8 @@ struct TabBar: View {
                 switch selectedMenu {
                 case 0:
                     NavigationView {
-                        HomeView()
+//                        HomeView()
+                        Text("Home view")
                     }
                 case 1:
                     NavigationView {

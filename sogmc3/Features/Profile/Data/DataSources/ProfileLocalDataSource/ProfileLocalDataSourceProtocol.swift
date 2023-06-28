@@ -9,7 +9,7 @@ import Foundation
 
 protocol ProfileLocalDataSourceProtocol {
     func savePublicAccessToken(_ accessToken: String) throws
-    func saveUserAccessToken(_ accessToken: String, forBankID bankID: String) throws
+    func saveUserAccessToken(_ accessToken: String, forKey key: String) throws
     func readPublicAccessToken() throws -> String
-    func readUserAccessToken(for bankID: String) throws -> String
+    func readUserAccessToken(forKey key: String) throws -> String
 }

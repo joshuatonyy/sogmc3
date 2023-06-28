@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22F66" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22E261" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="BudgetMethodEntity" representedClassName="BudgetMethodEntity" syncable="YES" codeGenerationType="class">
         <attribute name="budgetMethodName" optional="YES" attributeType="String"/>
         <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CategoryEntity" inverseName="budgets" inverseEntity="CategoryEntity"/>
@@ -22,6 +22,7 @@
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TransactionEntity" inverseName="subcategories" inverseEntity="TransactionEntity"/>
     </entity>
     <entity name="TransactionEntity" representedClassName="TransactionEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="referenceID" attributeType="String"/>
         <attribute name="transactionAmount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="transactionaName" optional="YES" attributeType="String"/>
         <attribute name="transactionDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -32,6 +33,11 @@
     <entity name="TransactionTypeEntity" representedClassName="TransactionTypeEntity" syncable="YES" codeGenerationType="class">
         <attribute name="transactionTypeName" optional="YES" attributeType="String"/>
         <relationship name="transactions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TransactionEntity" inverseName="transactiontypes" inverseEntity="TransactionEntity"/>
+    </entity>
+    <entity name="UserAccessTokenEntity" representedClassName="UserAccessTokenEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="bankID" attributeType="String"/>
+        <attribute name="key" attributeType="String"/>
+        <attribute name="lastUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class">
         <attribute name="userID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
