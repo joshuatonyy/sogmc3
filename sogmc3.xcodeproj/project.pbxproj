@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1358469B2A4A99DF00588859 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135846972A4A99DF00588859 /* CoreDataManager.swift */; };
+		1358469C2A4A99DF00588859 /* CoreDataContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 135846982A4A99DF00588859 /* CoreDataContainer.xcdatamodeld */; };
+		1358469D2A4A99DF00588859 /* CoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358469A2A4A99DF00588859 /* CoreDataViewModel.swift */; };
+		135846A32A4A9CFE00588859 /* TransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135846A22A4A9CFE00588859 /* TransactionRepository.swift */; };
 		139FEA522A41EDBA004FB05D /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEA512A41EDBA004FB05D /* Color+Theme.swift */; };
 		139FEA8B2A443E67004FB05D /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEA8A2A443E67004FB05D /* AuthResponse.swift */; };
 		139FEA8E2A447677004FB05D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEA8D2A447677004FB05D /* Endpoint.swift */; };
@@ -43,6 +47,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		135846972A4A99DF00588859 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		135846992A4A99DF00588859 /* CoreDataContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataContainer.xcdatamodel; sourceTree = "<group>"; };
+		1358469A2A4A99DF00588859 /* CoreDataViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataViewModel.swift; sourceTree = "<group>"; };
+		135846A22A4A9CFE00588859 /* TransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepository.swift; sourceTree = "<group>"; };
 		139FEA512A41EDBA004FB05D /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Theme.swift"; sourceTree = "<group>"; };
 		139FEA8A2A443E67004FB05D /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		139FEA8D2A447677004FB05D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -90,6 +98,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		135846962A4A99DF00588859 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				135846972A4A99DF00588859 /* CoreDataManager.swift */,
+				135846982A4A99DF00588859 /* CoreDataContainer.xcdatamodeld */,
+				1358469A2A4A99DF00588859 /* CoreDataViewModel.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1358469E2A4A9B8500588859 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				1358469F2A4A9B9400588859 /* Data */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		1358469F2A4A9B9400588859 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				135846A02A4A9C2000588859 /* DataSources */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		135846A02A4A9C2000588859 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				135846A12A4A9CD100588859 /* TransactionRemoteDataSource */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		135846A12A4A9CD100588859 /* TransactionRemoteDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				135846A22A4A9CFE00588859 /* TransactionRepository.swift */,
+			);
+			path = TransactionRemoteDataSource;
+			sourceTree = "<group>";
+		};
 		139FEA862A443C47004FB05D /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +292,7 @@
 		423944422A3E3B2C00E5F23E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				135846962A4A99DF00588859 /* Utilities */,
 				423944442A3E3B7A00E5F23E /* Data */,
 				423944452A3E3B8800E5F23E /* Themes */,
 				139FEA952A44866F004FB05D /* Helpers */,
@@ -252,6 +303,7 @@
 		423944432A3E3B3500E5F23E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				1358469E2A4A9B8500588859 /* Transactions */,
 				139FEA982A448708004FB05D /* Profile */,
 				428797152A40367A0018869A /* Home */,
 			);
@@ -458,6 +510,7 @@
 			files = (
 				139FEA902A447698004FB05D /* RequestMethod.swift in Sources */,
 				80320C632A4AD2730027CB85 /* ProgressBarHomeComponent.swift in Sources */,
+				1358469D2A4A99DF00588859 /* CoreDataViewModel.swift in Sources */,
 				139FEAB82A454C6C004FB05D /* WebView.swift in Sources */,
 				139FEAA52A451E7F004FB05D /* KeychainError.swift in Sources */,
 				139FEA8E2A447677004FB05D /* Endpoint.swift in Sources */,
@@ -471,6 +524,9 @@
 				42E79F692A3E3857003B4482 /* ContentView.swift in Sources */,
 				139FEA942A447958004FB05D /* HTTPClient.swift in Sources */,
 				80320C662A4AD2730027CB85 /* DimmedViewComponent.swift in Sources */,
+				1358469B2A4A99DF00588859 /* CoreDataManager.swift in Sources */,
+				135846A32A4A9CFE00588859 /* TransactionRepository.swift in Sources */,
+				1358469C2A4A99DF00588859 /* CoreDataContainer.xcdatamodeld in Sources */,
 				139FEAA92A452241004FB05D /* ProfileLocalDataSourceProtocol.swift in Sources */,
 				80320C6D2A4AD3080027CB85 /* HomeView.swift in Sources */,
 				139FEA8B2A443E67004FB05D /* AuthResponse.swift in Sources */,
@@ -687,6 +743,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		135846982A4A99DF00588859 /* CoreDataContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				135846992A4A99DF00588859 /* CoreDataContainer.xcdatamodel */,
+			);
+			currentVersion = 135846992A4A99DF00588859 /* CoreDataContainer.xcdatamodel */;
+			path = CoreDataContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 42E79F5B2A3E3857003B4482 /* Project object */;
 }
