@@ -48,26 +48,26 @@ class NotificationManager{
     }
 }
 
-struct SetTimeComponent: View {
-    @Binding var notificationTime: Date
-    
-    var body: some View {
-        DatePicker(
-            "Set Notification Time",
-            selection: $notificationTime,
-            displayedComponents: [.hourAndMinute]
-        )
-        .datePickerStyle(.wheel)
-        .labelsHidden()
-        .padding()
-        
-    }
-}
+
+
 
 
 struct SetReminderView: View {
-    @State var notificationTime: Date = Date()
-
+    @State private var notificationTime: Date
+    @State var showTimePicker: Bool = false
+    
+    init() {
+        let dateFromUserDefault: Date
+        if let date = UserDefaults.standard.object(forKey: "notificationTime") as? Date {
+            dateFromUserDefault = date
+        } else {
+            dateFromUserDefault = .init(timeIntervalSinceNow: 3600)
+        }
+        
+        self._notificationTime = State(wrappedValue: dateFromUserDefault)
+        print("userDefault read with \(notificationTime)")
+    }
+    
     var body: some View {
         VStack (alignment: .leading){
             Text("Set reminder")
@@ -83,16 +83,21 @@ struct SetReminderView: View {
             Divider()
                 .frame(height: 2)
                 .overlay(Color.Neutral.s80)
-                .padding([.bottom, .leading, .trailing], 15)
+                .padding([.bottom, .leading, .trailing], 13)
             
-            Button("Change") {
-                NotificationManager.instance.requestAuthorization()
-    //                SetTimeComponent(notificationTime: $notificationTime)
-
-            }
-            
-            Button("Time trigger") {
-                NotificationManager.instance.scheduleNotification()
+            HStack{
+                Text("\(formattedTime)")
+                    .font(.system(.title))
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.Neutral.s20)
+                Spacer()
+                Button(action: {
+                    showTimePicker.toggle()
+                }) {
+                    Text("Change")
+                        
+                }
+        
             }
             
         }
@@ -108,5 +113,26 @@ struct SetReminderView: View {
         .onAppear{
             UIApplication.shared.applicationIconBadgeNumber = 0
         }
+        
+        
+        .sheet(isPresented: $showTimePicker) {
+            TimePickerComponent(notificationTime: $notificationTime, showTimePicker: $showTimePicker)
+        }
+        .onAppear {
+            let dateFromUserDefault: Date
+            if let date = UserDefaults.standard.object(forKey: "notificationTime") as? Date {
+                dateFromUserDefault = date
+            } else {
+                dateFromUserDefault = .init(timeIntervalSinceNow: 3600)
+            }
+            notificationTime = dateFromUserDefault
+        }
     }
+    
+    private var formattedTime: String {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        return formatter.string(from: notificationTime)
+    }
+
 }

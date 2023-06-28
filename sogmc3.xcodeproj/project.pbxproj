@@ -23,7 +23,6 @@
 		139FEAAC2A452281004FB05D /* ProfileRemoteDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEAAB2A452281004FB05D /* ProfileRemoteDataSourceProtocol.swift */; };
 		139FEAAE2A452315004FB05D /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEAAD2A452315004FB05D /* ProfileRepository.swift */; };
 		2624581D2A49D901008D9FB0 /* TimePickerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2624581C2A49D901008D9FB0 /* TimePickerComponent.swift */; };
-		2624581F2A4ADC5D008D9FB0 /* TimeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2624581E2A4ADC5D008D9FB0 /* TimeComponent.swift */; };
 		262458212A4AED80008D9FB0 /* EditIncomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262458202A4AED80008D9FB0 /* EditIncomeSection.swift */; };
 		262458232A4AEDC9008D9FB0 /* SetReminderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262458222A4AEDC9008D9FB0 /* SetReminderSection.swift */; };
 		264641592A47619800F56182 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264641582A47619800F56182 /* ProfileView.swift */; };
@@ -70,7 +69,6 @@
 		139FEAAB2A452281004FB05D /* ProfileRemoteDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRemoteDataSourceProtocol.swift; sourceTree = "<group>"; };
 		139FEAAD2A452315004FB05D /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
 		2624581C2A49D901008D9FB0 /* TimePickerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerComponent.swift; sourceTree = "<group>"; };
-		2624581E2A4ADC5D008D9FB0 /* TimeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeComponent.swift; sourceTree = "<group>"; };
 		262458202A4AED80008D9FB0 /* EditIncomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIncomeSection.swift; sourceTree = "<group>"; };
 		262458222A4AEDC9008D9FB0 /* SetReminderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetReminderSection.swift; sourceTree = "<group>"; };
 		264641582A47619800F56182 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -225,7 +223,6 @@
 			children = (
 				2646415C2A4761D400F56182 /* ConnectedAccountsCard.swift */,
 				2624581C2A49D901008D9FB0 /* TimePickerComponent.swift */,
-				2624581E2A4ADC5D008D9FB0 /* TimeComponent.swift */,
 				2646415E2A4761DF00F56182 /* BankCard.swift */,
 				262458202A4AED80008D9FB0 /* EditIncomeSection.swift */,
 				262458222A4AEDC9008D9FB0 /* SetReminderSection.swift */,
@@ -562,7 +559,6 @@
 				139FEA942A447958004FB05D /* HTTPClient.swift in Sources */,
 				139FEAA92A452241004FB05D /* ProfileLocalDataSourceProtocol.swift in Sources */,
 				2624581D2A49D901008D9FB0 /* TimePickerComponent.swift in Sources */,
-				2624581F2A4ADC5D008D9FB0 /* TimeComponent.swift in Sources */,
 				26D7ED562A49A8C600DA9C8B /* CoreDataManager.swift in Sources */,
 				4287974C2A4578750018869A /* TabBar2.swift in Sources */,
 				26D7ED602A49BBFE00DA9C8B /* TransactionView.swift in Sources */,

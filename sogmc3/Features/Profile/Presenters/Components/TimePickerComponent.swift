@@ -8,10 +8,41 @@
 import SwiftUI
 
 struct TimePickerComponent: View {
-   @State var notificationTime: Date = Date()
+    @Binding var notificationTime: Date
+    @Binding var showTimePicker: Bool
+    @State var notificatiomTimeTemp: Date = Date()
+    
+    init(notificationTime: Binding<Date>, showTimePicker: Binding<Bool>) {
+        self._notificationTime = notificationTime
+        self._showTimePicker = showTimePicker
+        
+//        print("init")
+    }
     
     var body: some View {
         VStack {
+            HStack{
+                Button(action: {
+                    notificationTime = UserDefaults.standard.object(forKey: "notificationTime") as! Date
+                    showTimePicker = false
+//                    print("on cancel: \(previousTime)")
+                }){
+                    Text("Cancel")
+                }
+                Spacer()
+                
+                Button(action: {
+                    showTimePicker = false
+                    // TODO: set selection time picker to setreminderview
+                    UserDefaults.standard.set(notificationTime, forKey: "notificationTime")
+                    print("userDefault saved with \(notificationTime)")
+
+                }){
+                    Text("Save")
+                }
+            }
+            .padding()
+            
             DatePicker(
                 "Set Notification Time",
                 selection: $notificationTime,
@@ -21,44 +52,24 @@ struct TimePickerComponent: View {
             .labelsHidden()
             .padding()
             
-//            Button(action: scheduleNotification) {
-//                Text("Schedule Notification")
-//                    .font(.headline)
-//                    .padding()
-//                    .foregroundColor(.white)
-//                    .background(Color.blue)
-//                    .cornerRadius(8)
-//            }
         }
-        .padding()
-    }
-    
-    func scheduleNotification() {
-        // Create a notification content
-        let content = UNMutableNotificationContent()
-        content.title = "Notification Title"
-        content.body = "This is a sample notification"
+        .edgesIgnoringSafeArea(.all)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .background(Color.Neutral.s70)
+        .gesture(DragGesture().onEnded { value in
+                if value.translation.height > 50 { // Adjust the threshold as needed
+                    showTimePicker = false
+                }
+            })
         
-        // Configure the notification trigger
-        let components = Calendar.current.dateComponents([.hour, .minute], from: notificationTime)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
-        
-        // Create a notification request
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        
-        // Schedule the notification
-        UNUserNotificationCenter.current().add(request) { error in
-            if let error = error {
-                print("Failed to schedule notification: \(error.localizedDescription)")
-            } else {
-                print("Notification scheduled for: \(self.notificationTime)")
-            }
-        }
+        .presentationDragIndicator(.visible)
+        .presentationDetents([.fraction(0.5)])
+
     }
 }
 
-struct TimePickerComponent_Previews: PreviewProvider {
-    static var previews: some View {
-        TimePickerComponent()
-    }
-}
+//struct TimePickerComponent_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TimePickerComponent()
+//    }
+//}

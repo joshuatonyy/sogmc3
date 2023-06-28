@@ -18,11 +18,9 @@ struct ReminderModel: Hashable, Codable, Identifiable {
         self.isActive = isActive
     }
     
-    static var defaultReminder: [ReminderModel] {
+    static var defaultReminder: ReminderModel {
         get{
-            [
-                ReminderModel(date: Date(), isActive: true)
-            ]
+            ReminderModel(date: Date(), isActive: true)
         }
     }
 }
