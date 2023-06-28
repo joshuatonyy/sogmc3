@@ -24,7 +24,6 @@ struct TabBar: View {
                 case 0:
                     NavigationView {
 //                        HomeView()
-                        Text("Home view")
                     }
                 case 1:
                     NavigationView {
