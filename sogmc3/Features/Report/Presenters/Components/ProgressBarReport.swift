@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProgressBarReport: View {
     @ObservedObject var categoryViewModel: CategoryViewModel
-    @State var spendRatio: Double = 0
+    @State var spendRatio: Double = 0.5
     var currentCategory: CategoryName
     
     var body: some View {
@@ -29,16 +29,22 @@ struct ProgressBarReport: View {
                                 .frame(width: categoryViewModel.category[idx].categorySpend >= categoryViewModel.category[idx].categoryBudget ? size.width : (categoryViewModel.category[idx].categorySpend / categoryViewModel.category[idx].categoryBudget) * size.width, height: 24)
                                 .foregroundColor(categoryViewModel.category[idx].categorySpend >= categoryViewModel.category[idx].categoryBudget ? Color.Semantic.Danger.main : Color.Main.s30)
                             
-                            Text("\(Int(categoryViewModel.category[idx].categorySpend / categoryViewModel.category[idx].categoryBudget) * 100)%")
+                            Text("\(Int((categoryViewModel.category[idx].categorySpend / categoryViewModel.category[idx].categoryBudget) * 100))%")
                                 .font(.caption2)
                                 .frame(maxWidth: .infinity, alignment: .trailing)
                                 .padding(.trailing, 15)
-                            }
+                        }
                     }
                     //MARK: Remaining and Used Text
-                    Text("Used \(Int(categoryViewModel.category[idx].categorySpend)) out of \(Int(categoryViewModel.category[idx].categoryBudget))")
-                        .foregroundColor(Color.Neutral.s50)
-                        .font(.caption)
+                    HStack{
+                        Text("\(categoryViewModel.category[idx].categorySpend.thousandToK()) Used")
+                            .foregroundColor(Color.Neutral.s50)
+                            .font(.caption)
+                        Spacer()
+                        Text("\((categoryViewModel.category[idx].categoryBudget - categoryViewModel.category[idx].categorySpend).thousandToK()) Remaining")
+                            .foregroundColor(Color.Neutral.s50)
+                            .font(.caption)
+                    }
                 }
                 .onAppear {
                     withAnimation(.easeIn(duration: 1.3)) {

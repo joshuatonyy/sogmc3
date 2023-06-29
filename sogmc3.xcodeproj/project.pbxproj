@@ -44,6 +44,7 @@
 		423228E52A4D7E2500A16534 /* SubCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423228E42A4D7E2500A16534 /* SubCategoryModel.swift */; };
 		423228E72A4D7EAD00A16534 /* CategoryRepositorySample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423228E62A4D7EAD00A16534 /* CategoryRepositorySample.swift */; };
 		423228EA2A4D8EA700A16534 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423228E92A4D8EA700A16534 /* CategoryViewModel.swift */; };
+		423228EC2A4DB35B00A16534 /* SubCategoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423228EB2A4DB35B00A16534 /* SubCategoryDetail.swift */; };
 		42E79F672A3E3857003B4482 /* sogmc3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E79F662A3E3857003B4482 /* sogmc3App.swift */; };
 		42E79F692A3E3857003B4482 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E79F682A3E3857003B4482 /* ContentView.swift */; };
 		42E79F6B2A3E3857003B4482 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42E79F6A2A3E3857003B4482 /* Assets.xcassets */; };
@@ -99,6 +100,7 @@
 		423228E42A4D7E2500A16534 /* SubCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryModel.swift; sourceTree = "<group>"; };
 		423228E62A4D7EAD00A16534 /* CategoryRepositorySample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepositorySample.swift; sourceTree = "<group>"; };
 		423228E92A4D8EA700A16534 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		423228EB2A4DB35B00A16534 /* SubCategoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryDetail.swift; sourceTree = "<group>"; };
 		42E79F632A3E3857003B4482 /* sogmc3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sogmc3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E79F662A3E3857003B4482 /* sogmc3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sogmc3App.swift; sourceTree = "<group>"; };
 		42E79F682A3E3857003B4482 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -371,8 +373,9 @@
 		423228DA2A4D6C8700A16534 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				423228DB2A4D6CC500A16534 /* ReportCard.swift */,
 				423228DD2A4D792900A16534 /* ProgressBarReport.swift */,
+				423228DB2A4D6CC500A16534 /* ReportCard.swift */,
+				423228EB2A4DB35B00A16534 /* SubCategoryDetail.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -664,6 +667,7 @@
 				139FEA942A447958004FB05D /* HTTPClient.swift in Sources */,
 				423228D32A4C4AA200A16534 /* TransactionModel.swift in Sources */,
 				80320C662A4AD2730027CB85 /* DimmedViewComponent.swift in Sources */,
+				423228EC2A4DB35B00A16534 /* SubCategoryDetail.swift in Sources */,
 				423228DC2A4D6CC500A16534 /* ReportCard.swift in Sources */,
 				1358469B2A4A99DF00588859 /* CoreDataManager.swift in Sources */,
 				135846A32A4A9CFE00588859 /* TransactionRepository.swift in Sources */,

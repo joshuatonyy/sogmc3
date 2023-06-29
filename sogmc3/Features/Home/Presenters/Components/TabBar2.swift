@@ -13,6 +13,7 @@ struct TabBar2: View {
     let iconsPlaceholder = ["house.fill", "arrow.left.arrow.right", "chart.bar.xaxis"]
     let iconsname_placeholder = ["Dashboard", "Transaction", "Report"]
     @StateObject var homeVM = MockHomeViewModel()
+    @StateObject var categoryViewModel = CategoryViewModel()
     
     var body: some View {
         VStack(spacing: 0){
@@ -40,7 +41,7 @@ struct TabBar2: View {
                 case 2:
                     NavigationView {
                         VStack {
-                            Text("3rd") //change to input menu
+                            ReportView() //change to input menu
                         }
                     }
                 default:

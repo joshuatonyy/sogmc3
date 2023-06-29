@@ -20,3 +20,29 @@ class CategoryViewModel: ObservableObject, Identifiable {
     }
     
 }
+
+extension Double {
+    func commaToDot() -> String {
+        let nfEs = NumberFormatter()
+        nfEs.numberStyle = .decimal
+        nfEs.locale = Locale(identifier: "es_ES")
+        
+        return nfEs.string(from: self as NSNumber)!
+    }
+    
+    func thousandToK() -> String {
+        let num = abs(self)
+        let sign = (self < 0) ? "-" : ""
+        
+        switch num {
+        case 0..<1000:
+            return "\(sign)\(self.commaToDot())"
+        case 1000..<1_000_000:
+            let formatted = num / 1000
+            return "\(sign)\(formatted.commaToDot())k"
+        default:
+            let formatted = num / 1_000_000
+            return "\(sign)\(formatted.commaToDot())M"
+        }
+    }
+}
