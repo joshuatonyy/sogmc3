@@ -19,6 +19,7 @@ struct ReportView: View {
             VStack{
                 Text("\(customDatePickerViewModel.month) \(String(customDatePickerViewModel.year))")
                     .font(.title3).bold()
+                    .foregroundColor(Color.Neutral.s10)
                     .simultaneousGesture(TapGesture().onEnded{
                         self.datePickerOn = true
                     })
@@ -29,6 +30,7 @@ struct ReportView: View {
                         .padding(.leading, 15)
                     Spacer()
                 }
+                .foregroundColor(Color.Neutral.s10)
                 .padding(.top)
                 HStack(alignment: .center, spacing: 8) {
                     Text("Needs")
@@ -59,6 +61,7 @@ struct ReportView: View {
                         }
                         .cornerRadius(8)
                 }
+                .foregroundColor(Color.Neutral.s10)
                 .padding(8)
                 .frame(height: 45)
                 .frame(maxWidth: .infinity, alignment: .topLeading)
@@ -83,7 +86,7 @@ struct ReportView: View {
                 .padding(.horizontal, 75)
                 .opacity(datePickerOn == true ? 1 : 0)
         
-        }.foregroundColor(Color.white)
+        }
     }
 }
 

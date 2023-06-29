@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProgressBarReport: View {
     @ObservedObject var categoryViewModel: CategoryViewModel
-    @State var spendRatio: Double = 0.5
+    @State var spendRatio: Double = 0
     var currentCategory: CategoryName
     
     var body: some View {
@@ -26,7 +26,7 @@ struct ProgressBarReport: View {
                                 .foregroundColor(Color.Neutral.s40)
                             
                             RoundedRectangle(cornerRadius: 8)
-                                .frame(width: categoryViewModel.category[idx].categorySpend >= categoryViewModel.category[idx].categoryBudget ? size.width : (categoryViewModel.category[idx].categorySpend / categoryViewModel.category[idx].categoryBudget) * size.width, height: 24)
+                                .frame(width: categoryViewModel.category[idx].categorySpend >= categoryViewModel.category[idx].categoryBudget ? size.width : (spendRatio) * size.width, height: 24)
                                 .foregroundColor(categoryViewModel.category[idx].categorySpend >= categoryViewModel.category[idx].categoryBudget ? Color.Semantic.Danger.main : Color.Main.s30)
                             
                             Text("\(Int((categoryViewModel.category[idx].categorySpend / categoryViewModel.category[idx].categoryBudget) * 100))%")
