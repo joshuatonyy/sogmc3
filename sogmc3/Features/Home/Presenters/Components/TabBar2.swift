@@ -35,9 +35,7 @@ struct TabBar2: View {
                     }
                 case 1:
                     NavigationView {
-                        VStack {
-                            Text("2nd") //change to transaction menu
-                        }
+                       TransactionView()
                     }
                 case 2:
                     NavigationView {
