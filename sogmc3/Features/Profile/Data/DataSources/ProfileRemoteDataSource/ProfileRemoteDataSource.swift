@@ -54,6 +54,7 @@ struct ProfileRemoteDataSource: ProfileRemoteDataSourceProtocol, HTTPClient {
                 guard let decodedResponse = try? decoder.decode(GetAllUserTokenResponse.self, from: data) else {
                     return .failure(.decode)
                 }
+                print(decodedResponse.accessTokens.first?.accessToken)
                 return .success(decodedResponse.accessTokens)
             case 401:
                 return .failure(.unauthorized)

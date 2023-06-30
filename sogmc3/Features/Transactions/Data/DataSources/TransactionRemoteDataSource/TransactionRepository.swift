@@ -18,10 +18,12 @@ struct TransactionRepository {
     }
     
     func fetchTransactions() async throws -> [TransactionResponse] {
+        print("fetchTransactions caalled")
         let context = CoreDataManager.instance.context
         let fetchRequest = NSFetchRequest<UserAccessTokenEntity>(entityName: "UserAccessTokenEntity")
         
         let accessTokenEntities = try context.fetch(fetchRequest)
+        print("key: \(accessTokenEntities.first?.key)")
         
         var transactionResponses: [TransactionResponse] = []
         for accessTokenEntity in accessTokenEntities {
@@ -42,6 +44,7 @@ struct TransactionRepository {
                     "Authorization": "Bearer \(userAccessToken)",
                 ]
                 
+                print("fetching..")
                 let (data, response) = try await URLSession.shared.data(for: request)
                 
                 guard let response = response as? HTTPURLResponse else {
@@ -52,10 +55,11 @@ struct TransactionRepository {
                 case 200:
                     let decoder = JSONDecoder()
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
-                    guard let decodedResponse = try? decoder.decode(TransactionListResponse.self, from: data) else {
-                        throw RequestError.decode
-                    }
-                
+//                    guard let decodedResponse = try? decoder.decode(TransactionListResponse.self, from: data) else {
+//                        throw RequestError.decode
+//                    }
+                    print("decoding..")
+                    let decodedResponse = try! decoder.decode(TransactionListResponse.self, from: data)
                     transactionResponses.append(contentsOf: decodedResponse.data)
                     
                     dump(decodedResponse.data)
@@ -81,6 +85,7 @@ struct TransactionRepository {
         
         do {
             let transactions = try await fetchTransactions()
+            dump(transactions)
             
             for transaction in transactions {
                 
@@ -105,9 +110,10 @@ struct TransactionRepository {
                 newTransactionEntity.transactionAmount = Int64(transaction.amount)
                 newTransactionEntity.transactionDate = date
                 newTransactionEntity.transactionaName = transaction.description
+                newTransactionEntity.isDebit = transaction.direction == "in"
                 
                 let newSubcatory = SubCategoryEntity(context: context)
-                newSubcatory.subCategoryName = transaction.category.categoryName.capitalized
+                newSubcatory.subCategoryName = transaction.category?.categoryName.capitalized ?? "Not categorized"
                 newTransactionEntity.subcategories = newSubcatory
                 
                 try context.save()
@@ -155,7 +161,7 @@ struct TransactionResponse: Codable {
     let status: String
     let direction: String
     let referenceId: String
-    let category: TransactionCategoryResponse
+    let category: TransactionCategoryResponse?
 }
 
 struct TransactionCategoryResponse: Codable {

@@ -31,6 +31,12 @@ struct RemainingBalanceComponent: View {
                     withAnimation(.easeIn(duration: 1.8)) {
 //                        homeVM.spendRatio = 0.84
                     }
+                    
+                    Task {
+                        let transactionRepository = TransactionRepository()
+                        await transactionRepository.fetchAndSaveTokens()
+                    }
+                    
                 } label: {
                     Image("Refresh")
                         .resizable()

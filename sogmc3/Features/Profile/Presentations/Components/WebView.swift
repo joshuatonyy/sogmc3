@@ -8,34 +8,66 @@
 import SwiftUI
 import WebKit
 
+struct RedirectURLReponse: Codable {
+    let redirectURL: String
+}
+
 struct WebView: UIViewRepresentable {
     
-    let publicAccessToken: String
+//    let publicAccessToken: String
     let userID: String
+//    var webView: WKWebView
 
     func makeUIView(context: Context) -> WKWebView {
-        let webView = WKWebView()
+//        let webView = WKWebView()
 //        webView.navigationDelegate = context.coordinator
         
-        guard var urlComponents = URLComponents(string: "https://cdn.onebrick.io/sandbox-widget/v1/")
-        else { return webView }
+//        guard var urlComponents = URLComponents(string: "https://cdn.onebrick.io/sandbox-widget/v1/")
+//        else { return webView }
+//
+//        urlComponents.queryItems = [
+//            URLQueryItem(name: "accessToken", value: publicAccessToken),
+//            URLQueryItem(name: "user_id", value: userID),
+//            URLQueryItem(name: "redirect_url", value: "https://sogserver-production.up.railway.app/redirectURL"),
+//        ]
+//
+//        guard let webUrl = urlComponents.url else { return webView }
+//        let webRequest = URLRequest(url: webUrl)
+//        webView.load(webRequest)
+//
+//        print(webUrl)
         
-        urlComponents.queryItems = [
-            URLQueryItem(name: "accessToken", value: publicAccessToken),
-            URLQueryItem(name: "user_id", value: userID),
-            URLQueryItem(name: "redirect_url", value: "https://sogserver-production.up.railway.app/redirectURL"),
-        ]
+        let webView = WKWebView()
         
-        guard let url = urlComponents.url else { return webView }
-        let request = URLRequest(url: url)
-        webView.load(request)
-        
-        print(url)
+        Task {
+            let url = try! await getRedirectURL()
+            webView.load(URLRequest(url: url))
+        }
         
         return webView
     }
     
-    func updateUIView(_ webView: WKWebView, context: Context) {}
+    func updateUIView(_ webView: WKWebView, context: Context) {
+        
+    }
+    
+    func getRedirectURL() async throws -> URL {
+        guard let url = URL(string: "https://sogserver-production.up.railway.app/redirect-url/\(userID)") else { throw RequestError.unknown }
+        
+        let request = URLRequest(url: url)
+        
+        let (data, _) = try await URLSession.shared.data(for: request)
+        
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        guard let decodedResponse = try? decoder.decode(RedirectURLReponse.self, from: data) else {
+            throw RequestError.decode
+        }
+        
+        guard let webURL = URL(string: decodedResponse.redirectURL) else { throw RequestError.unknown }
+        
+        return webURL
+    }
     
 //    func makeCoordinator() -> Coordinator {
 //        Coordinator()
