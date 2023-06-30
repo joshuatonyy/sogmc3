@@ -10,13 +10,14 @@ import SwiftUI
 struct DropDownMenuList: View {
     // option
     let options: [DropDownMenuOption]
+    @ObservedObject var subCategoryVM: MockSubCategoryViewModel
     
     // an action called when user select an action
     let isSelectedOption: (_ option: DropDownMenuOption) -> Void
     var body: some View {
         ScrollView{
             LazyVStack (alignment: .leading, spacing: 2){
-                ForEach(options) { option in
+                ForEach(subCategoryVM.subCategoryData) { option in
                     DropDownRowList(option: option, isSelectedOption: self.isSelectedOption)
                     Divider()
                 }

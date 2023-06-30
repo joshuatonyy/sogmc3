@@ -63,8 +63,8 @@ struct AssessmentResultView: View {
                 
                 //MARK: Button
                 Button {
-                    //go to AssessmentSubCatView
-                    selectedMenu = 1
+                    //go to Home
+                    selectedMenu = 0
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 20)

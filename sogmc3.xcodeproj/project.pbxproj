@@ -82,11 +82,11 @@
 		80320C732A4AE5B10027CB85 /* AssessmentResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80320C722A4AE5B10027CB85 /* AssessmentResultView.swift */; };
 		80320C752A4AE6060027CB85 /* AssessmentNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80320C742A4AE6060027CB85 /* AssessmentNameView.swift */; };
 		80320C772A4AE6D40027CB85 /* AssessmentSubCatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80320C762A4AE6D40027CB85 /* AssessmentSubCatView.swift */; };
-		805F52C92A4E6EB200B2BFAA /* SubCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805F52C82A4E6EB200B2BFAA /* SubCategoryModel.swift */; };
+		805F52C92A4E6EB200B2BFAA /* MockSubCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805F52C82A4E6EB200B2BFAA /* MockSubCategoryModel.swift */; };
 		805F52CB2A4E6F3100B2BFAA /* AssessmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805F52CA2A4E6F3100B2BFAA /* AssessmentViewModel.swift */; };
 		805F52CD2A4E6F9100B2BFAA /* SubCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805F52CC2A4E6F9100B2BFAA /* SubCategoryViewModel.swift */; };
-		805F52CF2A4E6FC000B2BFAA /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805F52CE2A4E6FC000B2BFAA /* CategoryViewModel.swift */; };
-		805F52D12A4E701800B2BFAA /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805F52D02A4E701800B2BFAA /* CategoryModel.swift */; };
+		805F52CF2A4E6FC000B2BFAA /* MockCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805F52CE2A4E6FC000B2BFAA /* MockCategoryViewModel.swift */; };
+		805F52D12A4E701800B2BFAA /* MockCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805F52D02A4E701800B2BFAA /* MockCategoryModel.swift */; };
 		80E62E482A4BDF9E00C3CA0B /* AssessmentButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E62E472A4BDF9E00C3CA0B /* AssessmentButtonComponent.swift */; };
 		80E62E4A2A4BE67A00C3CA0B /* AssessmentCategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E62E492A4BE67A00C3CA0B /* AssessmentCategoryCard.swift */; };
 		80E62E4C2A4BE9C400C3CA0B /* AssessmentSubCategoryListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E62E4B2A4BE9C400C3CA0B /* AssessmentSubCategoryListComponent.swift */; };
@@ -175,11 +175,11 @@
 		80320C722A4AE5B10027CB85 /* AssessmentResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentResultView.swift; sourceTree = "<group>"; };
 		80320C742A4AE6060027CB85 /* AssessmentNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentNameView.swift; sourceTree = "<group>"; };
 		80320C762A4AE6D40027CB85 /* AssessmentSubCatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentSubCatView.swift; sourceTree = "<group>"; };
-		805F52C82A4E6EB200B2BFAA /* SubCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryModel.swift; sourceTree = "<group>"; };
+		805F52C82A4E6EB200B2BFAA /* MockSubCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSubCategoryModel.swift; sourceTree = "<group>"; };
 		805F52CA2A4E6F3100B2BFAA /* AssessmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentViewModel.swift; sourceTree = "<group>"; };
 		805F52CC2A4E6F9100B2BFAA /* SubCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryViewModel.swift; sourceTree = "<group>"; };
-		805F52CE2A4E6FC000B2BFAA /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
-		805F52D02A4E701800B2BFAA /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		805F52CE2A4E6FC000B2BFAA /* MockCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCategoryViewModel.swift; sourceTree = "<group>"; };
+		805F52D02A4E701800B2BFAA /* MockCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCategoryModel.swift; sourceTree = "<group>"; };
 		80E62E472A4BDF9E00C3CA0B /* AssessmentButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentButtonComponent.swift; sourceTree = "<group>"; };
 		80E62E492A4BE67A00C3CA0B /* AssessmentCategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentCategoryCard.swift; sourceTree = "<group>"; };
 		80E62E4B2A4BE9C400C3CA0B /* AssessmentSubCategoryListComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentSubCategoryListComponent.swift; sourceTree = "<group>"; };
@@ -731,8 +731,8 @@
 		805F52C42A4E6E1000B2BFAA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				805F52C82A4E6EB200B2BFAA /* SubCategoryModel.swift */,
-				805F52D02A4E701800B2BFAA /* CategoryModel.swift */,
+				805F52C82A4E6EB200B2BFAA /* MockSubCategoryModel.swift */,
+				805F52D02A4E701800B2BFAA /* MockCategoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -741,7 +741,7 @@
 			isa = PBXGroup;
 			children = (
 				805F52CC2A4E6F9100B2BFAA /* SubCategoryViewModel.swift */,
-				805F52CE2A4E6FC000B2BFAA /* CategoryViewModel.swift */,
+				805F52CE2A4E6FC000B2BFAA /* MockCategoryViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -914,13 +914,13 @@
 				423228E12A4D7A6B00A16534 /* CategoryModel.swift in Sources */,
 				139FEA8B2A443E67004FB05D /* AuthResponse.swift in Sources */,
 				139FEAA02A45117A004FB05D /* ProfileLocalDataSource.swift in Sources */,
-				805F52C92A4E6EB200B2BFAA /* SubCategoryModel.swift in Sources */,
+				805F52C92A4E6EB200B2BFAA /* MockSubCategoryModel.swift in Sources */,
 				139FEA972A44868C004FB05D /* URLRequest+initFromEndpoint.swift in Sources */,
 				139FEABA2A4925C2004FB05D /* AccessToken.swift in Sources */,
-				805F52D12A4E701800B2BFAA /* CategoryModel.swift in Sources */,
+				805F52D12A4E701800B2BFAA /* MockCategoryModel.swift in Sources */,
 				26649E5D2A4EBA6400DA7DC8 /* EditIncomeSection.swift in Sources */,
 				139FEAA32A4512B2004FB05D /* KeychainClient.swift in Sources */,
-				805F52CF2A4E6FC000B2BFAA /* CategoryViewModel.swift in Sources */,
+				805F52CF2A4E6FC000B2BFAA /* MockCategoryViewModel.swift in Sources */,
 				42E79F672A3E3857003B4482 /* sogmc3App.swift in Sources */,
 				80320C6B2A4AD2730027CB85 /* TabBar2.swift in Sources */,
 				139FEAAE2A452315004FB05D /* ProfileRepository.swift in Sources */,

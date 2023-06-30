@@ -68,7 +68,7 @@ struct EditIncomeSheetView: View {
             }
             .background(
             RoundedRectangle(cornerRadius: 12)
-                .fill(Color.Button.main)
+                .fill(Color.ButtonColor.main)
             )
             .padding()
             

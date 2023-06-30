@@ -30,7 +30,11 @@ struct DropDown: View {
             }
         } label: {
             HStack{
-                Text(selectedOption == nil ? "" : selectedOption!.icon)
+                ZStack{
+                    Circle().fill(selectedOption == nil ? Color.CardColor.secondary : Color.CategoryColor.red).frame(width: 30, height: 30)
+
+                    Text(selectedOption == nil ? "" : selectedOption!.icon)
+                }
                 Text(selectedOption == nil ? placeholder : selectedOption!.option)
                     .fontWeight(.medium)
                     .foregroundColor(selectedOption == nil ? .gray : .white)

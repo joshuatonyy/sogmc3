@@ -63,6 +63,7 @@ extension Color {
     
     struct CardColor {
         static let main = Color("cardColor-main")
+        static let secondary = Color("cardColor-secondary")
     }
     
     struct Semantic {

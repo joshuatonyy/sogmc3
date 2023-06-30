@@ -68,7 +68,7 @@ struct HomeView: View {
                         .frame(width: 358, height: homeVM.isNotificationExist ? 175 : 143)
                         .clipShape(RoundedRectangle(cornerRadius: 8))
                     
-                    TopSpendingComponent(topSpendVM: topSpendVM)
+                    TopSpendingComponent(subCategoryVM: subCategoryVM)
                         .padding(.top, 30)
                 }
     //            ZStack {
