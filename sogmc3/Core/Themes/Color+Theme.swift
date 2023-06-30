@@ -22,9 +22,6 @@ extension Color {
         static let s80 = Color("main-80")
         static let s90 = Color("main-90")
         static let s100 = Color("main-100")
-        
-//        static let mainBackground = Color("mainBackground")
-//        static let mainCard = Color("mainCard")
     }
     
     struct Neutral {
@@ -84,6 +81,7 @@ extension Color {
         
         struct Danger {
             static let main = Color("danger-main")
+            static let fill = Color("danger-fill")
         }
   
     }
@@ -94,7 +92,9 @@ extension Color {
         static let red = Color("categoryColor-red")
     }
     
-    struct Button {
+    struct ButtonColor {
         static let main = Color("button-main")
+        static let unclicked = Color("button-unclicked")
     }
+    
 }

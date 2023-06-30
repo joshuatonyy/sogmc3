@@ -79,6 +79,23 @@
 		80320C6A2A4AD2730027CB85 /* TopSpendingListCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80320C602A4AD2730027CB85 /* TopSpendingListCardComponent.swift */; };
 		80320C6B2A4AD2730027CB85 /* TabBar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80320C612A4AD2730027CB85 /* TabBar2.swift */; };
 		80320C6D2A4AD3080027CB85 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80320C6C2A4AD3080027CB85 /* HomeView.swift */; };
+		80320C732A4AE5B10027CB85 /* AssessmentResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80320C722A4AE5B10027CB85 /* AssessmentResultView.swift */; };
+		80320C752A4AE6060027CB85 /* AssessmentNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80320C742A4AE6060027CB85 /* AssessmentNameView.swift */; };
+		80320C772A4AE6D40027CB85 /* AssessmentSubCatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80320C762A4AE6D40027CB85 /* AssessmentSubCatView.swift */; };
+		805F52C92A4E6EB200B2BFAA /* SubCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805F52C82A4E6EB200B2BFAA /* SubCategoryModel.swift */; };
+		805F52CB2A4E6F3100B2BFAA /* AssessmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805F52CA2A4E6F3100B2BFAA /* AssessmentViewModel.swift */; };
+		805F52CD2A4E6F9100B2BFAA /* SubCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805F52CC2A4E6F9100B2BFAA /* SubCategoryViewModel.swift */; };
+		805F52CF2A4E6FC000B2BFAA /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805F52CE2A4E6FC000B2BFAA /* CategoryViewModel.swift */; };
+		805F52D12A4E701800B2BFAA /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805F52D02A4E701800B2BFAA /* CategoryModel.swift */; };
+		80E62E482A4BDF9E00C3CA0B /* AssessmentButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E62E472A4BDF9E00C3CA0B /* AssessmentButtonComponent.swift */; };
+		80E62E4A2A4BE67A00C3CA0B /* AssessmentCategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E62E492A4BE67A00C3CA0B /* AssessmentCategoryCard.swift */; };
+		80E62E4C2A4BE9C400C3CA0B /* AssessmentSubCategoryListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E62E4B2A4BE9C400C3CA0B /* AssessmentSubCategoryListComponent.swift */; };
+		80F7605A2A4B4144004D31B7 /* AssessmentBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F760592A4B4144004D31B7 /* AssessmentBudgetView.swift */; };
+		80FD43B32A4E73E800C94ABB /* AssessmentHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FD43B22A4E73E800C94ABB /* AssessmentHelper.swift */; };
+		80FD43B62A4E768300C94ABB /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 80FD43B52A4E768300C94ABB /* Lottie */; };
+		80FD43B92A4E777C00C94ABB /* LottieComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FD43B82A4E777C00C94ABB /* LottieComponent.swift */; };
+		80FD43BB2A4E77A800C94ABB /* AssessmentLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FD43BA2A4E77A800C94ABB /* AssessmentLoadingView.swift */; };
+		80FD43BE2A4E7CB600C94ABB /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FD43BD2A4E7CB600C94ABB /* Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +172,22 @@
 		80320C602A4AD2730027CB85 /* TopSpendingListCardComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopSpendingListCardComponent.swift; sourceTree = "<group>"; };
 		80320C612A4AD2730027CB85 /* TabBar2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar2.swift; sourceTree = "<group>"; };
 		80320C6C2A4AD3080027CB85 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		80320C722A4AE5B10027CB85 /* AssessmentResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentResultView.swift; sourceTree = "<group>"; };
+		80320C742A4AE6060027CB85 /* AssessmentNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentNameView.swift; sourceTree = "<group>"; };
+		80320C762A4AE6D40027CB85 /* AssessmentSubCatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentSubCatView.swift; sourceTree = "<group>"; };
+		805F52C82A4E6EB200B2BFAA /* SubCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryModel.swift; sourceTree = "<group>"; };
+		805F52CA2A4E6F3100B2BFAA /* AssessmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentViewModel.swift; sourceTree = "<group>"; };
+		805F52CC2A4E6F9100B2BFAA /* SubCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryViewModel.swift; sourceTree = "<group>"; };
+		805F52CE2A4E6FC000B2BFAA /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		805F52D02A4E701800B2BFAA /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		80E62E472A4BDF9E00C3CA0B /* AssessmentButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentButtonComponent.swift; sourceTree = "<group>"; };
+		80E62E492A4BE67A00C3CA0B /* AssessmentCategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentCategoryCard.swift; sourceTree = "<group>"; };
+		80E62E4B2A4BE9C400C3CA0B /* AssessmentSubCategoryListComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentSubCategoryListComponent.swift; sourceTree = "<group>"; };
+		80F760592A4B4144004D31B7 /* AssessmentBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentBudgetView.swift; sourceTree = "<group>"; };
+		80FD43B22A4E73E800C94ABB /* AssessmentHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentHelper.swift; sourceTree = "<group>"; };
+		80FD43B82A4E777C00C94ABB /* LottieComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieComponent.swift; sourceTree = "<group>"; };
+		80FD43BA2A4E77A800C94ABB /* AssessmentLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentLoadingView.swift; sourceTree = "<group>"; };
+		80FD43BD2A4E7CB600C94ABB /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80FD43B62A4E768300C94ABB /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +530,7 @@
 		423944422A3E3B2C00E5F23E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				80FD43BC2A4E7C1F00C94ABB /* Constants */,
 				135846962A4A99DF00588859 /* Utilities */,
 				423944442A3E3B7A00E5F23E /* Data */,
 				423944452A3E3B8800E5F23E /* Themes */,
@@ -507,6 +542,7 @@
 		423944432A3E3B3500E5F23E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				80320C6E2A4AE1420027CB85 /* Assesment */,
 				423228D52A4D6C6100A16534 /* Report */,
 				1358469E2A4A9B8500588859 /* Transactions */,
 				139FEA982A448708004FB05D /* Profile */,
@@ -560,6 +596,8 @@
 		428797152A40367A0018869A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				805F52C52A4E6E2100B2BFAA /* ViewModels */,
+				805F52C42A4E6E1000B2BFAA /* Models */,
 				428797162A4036820018869A /* Presenters */,
 			);
 			path = Home;
@@ -647,6 +685,98 @@
 			path = HomeComponent;
 			sourceTree = "<group>";
 		};
+		80320C6E2A4AE1420027CB85 /* Assesment */ = {
+			isa = PBXGroup;
+			children = (
+				805F52C72A4E6E3B00B2BFAA /* Models */,
+				805F52C62A4E6E3400B2BFAA /* ViewModels */,
+				80320C6F2A4AE15F0027CB85 /* Presentations */,
+			);
+			path = Assesment;
+			sourceTree = "<group>";
+		};
+		80320C6F2A4AE15F0027CB85 /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+				80320C712A4AE5910027CB85 /* Views */,
+				80320C702A4AE1680027CB85 /* Components */,
+				80FD43B72A4E773000C94ABB /* Helpers */,
+			);
+			path = Presentations;
+			sourceTree = "<group>";
+		};
+		80320C702A4AE1680027CB85 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				80E62E472A4BDF9E00C3CA0B /* AssessmentButtonComponent.swift */,
+				80E62E492A4BE67A00C3CA0B /* AssessmentCategoryCard.swift */,
+				80E62E4B2A4BE9C400C3CA0B /* AssessmentSubCategoryListComponent.swift */,
+				80FD43B82A4E777C00C94ABB /* LottieComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		80320C712A4AE5910027CB85 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				80320C742A4AE6060027CB85 /* AssessmentNameView.swift */,
+				80F760592A4B4144004D31B7 /* AssessmentBudgetView.swift */,
+				80320C762A4AE6D40027CB85 /* AssessmentSubCatView.swift */,
+				80320C722A4AE5B10027CB85 /* AssessmentResultView.swift */,
+				80FD43BA2A4E77A800C94ABB /* AssessmentLoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		805F52C42A4E6E1000B2BFAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				805F52C82A4E6EB200B2BFAA /* SubCategoryModel.swift */,
+				805F52D02A4E701800B2BFAA /* CategoryModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		805F52C52A4E6E2100B2BFAA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				805F52CC2A4E6F9100B2BFAA /* SubCategoryViewModel.swift */,
+				805F52CE2A4E6FC000B2BFAA /* CategoryViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		805F52C62A4E6E3400B2BFAA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				805F52CA2A4E6F3100B2BFAA /* AssessmentViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		805F52C72A4E6E3B00B2BFAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		80FD43B72A4E773000C94ABB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				80FD43B22A4E73E800C94ABB /* AssessmentHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		80FD43BC2A4E7C1F00C94ABB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				80FD43BD2A4E7CB600C94ABB /* Enums.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -663,6 +793,9 @@
 			dependencies = (
 			);
 			name = sogmc3;
+			packageProductDependencies = (
+				80FD43B52A4E768300C94ABB /* Lottie */,
+			);
 			productName = sogmc3;
 			productReference = 42E79F632A3E3857003B4482 /* sogmc3.app */;
 			productType = "com.apple.product-type.application";
@@ -691,6 +824,9 @@
 				Base,
 			);
 			mainGroup = 42E79F5A2A3E3857003B4482;
+			packageReferences = (
+				80FD43B42A4E768300C94ABB /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = 42E79F642A3E3857003B4482 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -717,6 +853,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				805F52CD2A4E6F9100B2BFAA /* SubCategoryViewModel.swift in Sources */,
 				139FEA902A447698004FB05D /* RequestMethod.swift in Sources */,
 				26649E5A2A4EBA6400DA7DC8 /* ConnectedBankSections.swift in Sources */,
 				26649E522A4EBA5500DA7DC8 /* SetReminderView.swift in Sources */,
@@ -737,17 +874,24 @@
 				423228CE2A4C4AA200A16534 /* CustomDatePicker.swift in Sources */,
 				423228FD2A4E4F2500A16534 /* DropDown.swift in Sources */,
 				139FEAAC2A452281004FB05D /* ProfileRemoteDataSourceProtocol.swift in Sources */,
+				80FD43B92A4E777C00C94ABB /* LottieComponent.swift in Sources */,
+				80E62E4A2A4BE67A00C3CA0B /* AssessmentCategoryCard.swift in Sources */,
 				139FEA9E2A448971004FB05D /* ProfileEndpoint.swift in Sources */,
+				80FD43B32A4E73E800C94ABB /* AssessmentHelper.swift in Sources */,
 				26649E512A4EBA5500DA7DC8 /* ProfileView.swift in Sources */,
 				423228D42A4C4AA200A16534 /* TransactionRepositorySample.swift in Sources */,
 				423228F52A4E4EC300A16534 /* inputCategoriesView.swift in Sources */,
 				423228CF2A4C4AA200A16534 /* TransactionList.swift in Sources */,
 				80320C642A4AD2730027CB85 /* PickerTopSpendingComponent.swift in Sources */,
+				80F7605A2A4B4144004D31B7 /* AssessmentBudgetView.swift in Sources */,
 				423228FE2A4E4F2500A16534 /* DropDownMenuList.swift in Sources */,
 				80320C622A4AD2730027CB85 /* TabBar.swift in Sources */,
 				423228FF2A4E4F2500A16534 /* DropDownRowList.swift in Sources */,
 				139FEA522A41EDBA004FB05D /* Color+Theme.swift in Sources */,
+				80FD43BB2A4E77A800C94ABB /* AssessmentLoadingView.swift in Sources */,
+				80320C772A4AE6D40027CB85 /* AssessmentSubCatView.swift in Sources */,
 				42E79F692A3E3857003B4482 /* ContentView.swift in Sources */,
+				80FD43BE2A4E7CB600C94ABB /* Enums.swift in Sources */,
 				139FEA942A447958004FB05D /* HTTPClient.swift in Sources */,
 				423228D32A4C4AA200A16534 /* TransactionModel.swift in Sources */,
 				80320C662A4AD2730027CB85 /* DimmedViewComponent.swift in Sources */,
@@ -764,25 +908,33 @@
 				139FEAA92A452241004FB05D /* ProfileLocalDataSourceProtocol.swift in Sources */,
 				26649E532A4EBA5500DA7DC8 /* EditIncomeSheetView.swift in Sources */,
 				80320C6D2A4AD3080027CB85 /* HomeView.swift in Sources */,
+				80E62E482A4BDF9E00C3CA0B /* AssessmentButtonComponent.swift in Sources */,
 				423228D12A4C4AA200A16534 /* DatePickerViewModel.swift in Sources */,
 				423228E32A4D7AD800A16534 /* CategoryName.swift in Sources */,
 				423228E12A4D7A6B00A16534 /* CategoryModel.swift in Sources */,
 				139FEA8B2A443E67004FB05D /* AuthResponse.swift in Sources */,
 				139FEAA02A45117A004FB05D /* ProfileLocalDataSource.swift in Sources */,
+				805F52C92A4E6EB200B2BFAA /* SubCategoryModel.swift in Sources */,
 				139FEA972A44868C004FB05D /* URLRequest+initFromEndpoint.swift in Sources */,
 				139FEABA2A4925C2004FB05D /* AccessToken.swift in Sources */,
+				805F52D12A4E701800B2BFAA /* CategoryModel.swift in Sources */,
 				26649E5D2A4EBA6400DA7DC8 /* EditIncomeSection.swift in Sources */,
 				139FEAA32A4512B2004FB05D /* KeychainClient.swift in Sources */,
+				805F52CF2A4E6FC000B2BFAA /* CategoryViewModel.swift in Sources */,
 				42E79F672A3E3857003B4482 /* sogmc3App.swift in Sources */,
 				80320C6B2A4AD2730027CB85 /* TabBar2.swift in Sources */,
 				139FEAAE2A452315004FB05D /* ProfileRepository.swift in Sources */,
 				139FEAB52A452D3B004FB05D /* BrickDebugView.swift in Sources */,
+				80E62E4C2A4BE9C400C3CA0B /* AssessmentSubCategoryListComponent.swift in Sources */,
+				80320C752A4AE6060027CB85 /* AssessmentNameView.swift in Sources */,
 				423228EA2A4D8EA700A16534 /* CategoryViewModel.swift in Sources */,
 				26649E5B2A4EBA6400DA7DC8 /* ConnectedAccountsCard.swift in Sources */,
 				80320C682A4AD2730027CB85 /* WarningInformationComponent.swift in Sources */,
 				80320C692A4AD2730027CB85 /* DashboardCardComponent.swift in Sources */,
+				80320C732A4AE5B10027CB85 /* AssessmentResultView.swift in Sources */,
 				80320C672A4AD2730027CB85 /* TopSpendingComponent.swift in Sources */,
 				139FEA922A44773B004FB05D /* RequestError.swift in Sources */,
+				805F52CB2A4E6F3100B2BFAA /* AssessmentViewModel.swift in Sources */,
 				423229022A4E518800A16534 /* DropdownViewModel.swift in Sources */,
 				423228D92A4D6C8300A16534 /* ReportView.swift in Sources */,
 				139FEA9C2A448916004FB05D /* ProfileRemoteDataSource.swift in Sources */,
@@ -987,6 +1139,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		80FD43B42A4E768300C94ABB /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		80FD43B52A4E768300C94ABB /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80FD43B42A4E768300C94ABB /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		135846982A4A99DF00588859 /* CoreDataContainer.xcdatamodeld */ = {
