@@ -29,6 +29,15 @@
 		139FEAB52A452D3B004FB05D /* BrickDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEAB42A452D3B004FB05D /* BrickDebugView.swift */; };
 		139FEAB82A454C6C004FB05D /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEAB72A454C6C004FB05D /* WebView.swift */; };
 		139FEABA2A4925C2004FB05D /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FEAB92A4925C2004FB05D /* AccessToken.swift */; };
+		26649E512A4EBA5500DA7DC8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26649E4E2A4EBA5400DA7DC8 /* ProfileView.swift */; };
+		26649E522A4EBA5500DA7DC8 /* SetReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26649E4F2A4EBA5500DA7DC8 /* SetReminderView.swift */; };
+		26649E532A4EBA5500DA7DC8 /* EditIncomeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26649E502A4EBA5500DA7DC8 /* EditIncomeSheetView.swift */; };
+		26649E5A2A4EBA6400DA7DC8 /* ConnectedBankSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26649E542A4EBA6400DA7DC8 /* ConnectedBankSections.swift */; };
+		26649E5B2A4EBA6400DA7DC8 /* ConnectedAccountsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26649E552A4EBA6400DA7DC8 /* ConnectedAccountsCard.swift */; };
+		26649E5C2A4EBA6400DA7DC8 /* BankCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26649E562A4EBA6400DA7DC8 /* BankCard.swift */; };
+		26649E5D2A4EBA6400DA7DC8 /* EditIncomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26649E572A4EBA6400DA7DC8 /* EditIncomeSection.swift */; };
+		26649E5E2A4EBA6400DA7DC8 /* SetReminderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26649E582A4EBA6400DA7DC8 /* SetReminderSection.swift */; };
+		26649E5F2A4EBA6400DA7DC8 /* TimePickerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26649E592A4EBA6400DA7DC8 /* TimePickerComponent.swift */; };
 		423228CE2A4C4AA200A16534 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423228C42A4C4AA200A16534 /* CustomDatePicker.swift */; };
 		423228CF2A4C4AA200A16534 /* TransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423228C52A4C4AA200A16534 /* TransactionList.swift */; };
 		423228D02A4C4AA200A16534 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423228C72A4C4AA200A16534 /* TransactionView.swift */; };
@@ -95,6 +104,15 @@
 		139FEAB42A452D3B004FB05D /* BrickDebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrickDebugView.swift; sourceTree = "<group>"; };
 		139FEAB72A454C6C004FB05D /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		139FEAB92A4925C2004FB05D /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
+		26649E4E2A4EBA5400DA7DC8 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		26649E4F2A4EBA5500DA7DC8 /* SetReminderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetReminderView.swift; sourceTree = "<group>"; };
+		26649E502A4EBA5500DA7DC8 /* EditIncomeSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditIncomeSheetView.swift; sourceTree = "<group>"; };
+		26649E542A4EBA6400DA7DC8 /* ConnectedBankSections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectedBankSections.swift; sourceTree = "<group>"; };
+		26649E552A4EBA6400DA7DC8 /* ConnectedAccountsCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectedAccountsCard.swift; sourceTree = "<group>"; };
+		26649E562A4EBA6400DA7DC8 /* BankCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
+		26649E572A4EBA6400DA7DC8 /* EditIncomeSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditIncomeSection.swift; sourceTree = "<group>"; };
+		26649E582A4EBA6400DA7DC8 /* SetReminderSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetReminderSection.swift; sourceTree = "<group>"; };
+		26649E592A4EBA6400DA7DC8 /* TimePickerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerComponent.swift; sourceTree = "<group>"; };
 		423228C42A4C4AA200A16534 /* CustomDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		423228C52A4C4AA200A16534 /* TransactionList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionList.swift; sourceTree = "<group>"; };
 		423228C72A4C4AA200A16534 /* TransactionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
@@ -306,6 +324,9 @@
 		139FEAB12A452D1C004FB05D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				26649E502A4EBA5500DA7DC8 /* EditIncomeSheetView.swift */,
+				26649E4E2A4EBA5400DA7DC8 /* ProfileView.swift */,
+				26649E4F2A4EBA5500DA7DC8 /* SetReminderView.swift */,
 				139FEAB42A452D3B004FB05D /* BrickDebugView.swift */,
 			);
 			path = Views;
@@ -315,6 +336,12 @@
 			isa = PBXGroup;
 			children = (
 				139FEAB72A454C6C004FB05D /* WebView.swift */,
+				26649E562A4EBA6400DA7DC8 /* BankCard.swift */,
+				26649E552A4EBA6400DA7DC8 /* ConnectedAccountsCard.swift */,
+				26649E542A4EBA6400DA7DC8 /* ConnectedBankSections.swift */,
+				26649E572A4EBA6400DA7DC8 /* EditIncomeSection.swift */,
+				26649E582A4EBA6400DA7DC8 /* SetReminderSection.swift */,
+				26649E592A4EBA6400DA7DC8 /* TimePickerComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -691,6 +718,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				139FEA902A447698004FB05D /* RequestMethod.swift in Sources */,
+				26649E5A2A4EBA6400DA7DC8 /* ConnectedBankSections.swift in Sources */,
+				26649E522A4EBA5500DA7DC8 /* SetReminderView.swift in Sources */,
 				80320C632A4AD2730027CB85 /* ProgressBarHomeComponent.swift in Sources */,
 				1358469D2A4A99DF00588859 /* CoreDataViewModel.swift in Sources */,
 				139FEAB82A454C6C004FB05D /* WebView.swift in Sources */,
@@ -704,10 +733,12 @@
 				423228F32A4E4EC300A16534 /* inputCategoriesCardView.swift in Sources */,
 				80320C652A4AD2730027CB85 /* RemainingBalanceComponent.swift in Sources */,
 				423228DE2A4D792900A16534 /* ProgressBarReport.swift in Sources */,
+				26649E5F2A4EBA6400DA7DC8 /* TimePickerComponent.swift in Sources */,
 				423228CE2A4C4AA200A16534 /* CustomDatePicker.swift in Sources */,
 				423228FD2A4E4F2500A16534 /* DropDown.swift in Sources */,
 				139FEAAC2A452281004FB05D /* ProfileRemoteDataSourceProtocol.swift in Sources */,
 				139FEA9E2A448971004FB05D /* ProfileEndpoint.swift in Sources */,
+				26649E512A4EBA5500DA7DC8 /* ProfileView.swift in Sources */,
 				423228D42A4C4AA200A16534 /* TransactionRepositorySample.swift in Sources */,
 				423228F52A4E4EC300A16534 /* inputCategoriesView.swift in Sources */,
 				423228CF2A4C4AA200A16534 /* TransactionList.swift in Sources */,
@@ -721,14 +752,17 @@
 				423228D32A4C4AA200A16534 /* TransactionModel.swift in Sources */,
 				80320C662A4AD2730027CB85 /* DimmedViewComponent.swift in Sources */,
 				423228EC2A4DB35B00A16534 /* SubCategoryDetail.swift in Sources */,
+				26649E5C2A4EBA6400DA7DC8 /* BankCard.swift in Sources */,
 				423228F22A4E4EC300A16534 /* MockTransaction.swift in Sources */,
 				423228DC2A4D6CC500A16534 /* ReportCard.swift in Sources */,
 				1358469B2A4A99DF00588859 /* CoreDataManager.swift in Sources */,
 				423228F42A4E4EC300A16534 /* NoTransactionView.swift in Sources */,
 				135846A32A4A9CFE00588859 /* TransactionRepository.swift in Sources */,
 				1358469C2A4A99DF00588859 /* CoreDataContainer.xcdatamodeld in Sources */,
+				26649E5E2A4EBA6400DA7DC8 /* SetReminderSection.swift in Sources */,
 				423228E52A4D7E2500A16534 /* SubCategoryModel.swift in Sources */,
 				139FEAA92A452241004FB05D /* ProfileLocalDataSourceProtocol.swift in Sources */,
+				26649E532A4EBA5500DA7DC8 /* EditIncomeSheetView.swift in Sources */,
 				80320C6D2A4AD3080027CB85 /* HomeView.swift in Sources */,
 				423228D12A4C4AA200A16534 /* DatePickerViewModel.swift in Sources */,
 				423228E32A4D7AD800A16534 /* CategoryName.swift in Sources */,
@@ -737,12 +771,14 @@
 				139FEAA02A45117A004FB05D /* ProfileLocalDataSource.swift in Sources */,
 				139FEA972A44868C004FB05D /* URLRequest+initFromEndpoint.swift in Sources */,
 				139FEABA2A4925C2004FB05D /* AccessToken.swift in Sources */,
+				26649E5D2A4EBA6400DA7DC8 /* EditIncomeSection.swift in Sources */,
 				139FEAA32A4512B2004FB05D /* KeychainClient.swift in Sources */,
 				42E79F672A3E3857003B4482 /* sogmc3App.swift in Sources */,
 				80320C6B2A4AD2730027CB85 /* TabBar2.swift in Sources */,
 				139FEAAE2A452315004FB05D /* ProfileRepository.swift in Sources */,
 				139FEAB52A452D3B004FB05D /* BrickDebugView.swift in Sources */,
 				423228EA2A4D8EA700A16534 /* CategoryViewModel.swift in Sources */,
+				26649E5B2A4EBA6400DA7DC8 /* ConnectedAccountsCard.swift in Sources */,
 				80320C682A4AD2730027CB85 /* WarningInformationComponent.swift in Sources */,
 				80320C692A4AD2730027CB85 /* DashboardCardComponent.swift in Sources */,
 				80320C672A4AD2730027CB85 /* TopSpendingComponent.swift in Sources */,

@@ -94,4 +94,7 @@ extension Color {
         static let red = Color("categoryColor-red")
     }
     
+    struct Button {
+        static let main = Color("button-main")
+    }
 }
