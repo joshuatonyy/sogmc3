@@ -79,3 +79,12 @@ class TransactionViewModel: ObservableObject, Identifiable {
     
     
 }
+
+extension Text {
+
+    func h1() -> Text {
+        self
+            .font(.title3)
+            .fontWeight(.semibold)
+    }
+}

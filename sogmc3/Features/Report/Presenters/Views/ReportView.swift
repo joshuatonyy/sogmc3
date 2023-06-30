@@ -18,7 +18,7 @@ struct ReportView: View {
             Color.Background.main.ignoresSafeArea()
             VStack{
                 Text("\(customDatePickerViewModel.month) \(String(customDatePickerViewModel.year))")
-                    .font(.title3).bold()
+                    .h1()
                     .foregroundColor(Color.Neutral.s10)
                     .simultaneousGesture(TapGesture().onEnded{
                         self.datePickerOn = true

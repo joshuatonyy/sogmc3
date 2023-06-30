@@ -20,13 +20,14 @@ struct TransactionView: View {
             Color.Background.main.ignoresSafeArea()
             VStack{
                 Text("\(customDatePickerViewModel.month) \(String(customDatePickerViewModel.year))")
-                    .font(.system(size: 20))
+                    .h1()
+                    .foregroundColor(Color.Neutral.s10)
                     .simultaneousGesture(TapGesture().onEnded{
                         self.datePickerOn = true
                     })
                 HStack{
                     Text("Transaction")
-                        .font(.system(size: 32))
+                        .font(.title2).bold()
                         .padding(.leading, 15)
                     Spacer()
                 }

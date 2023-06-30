@@ -28,7 +28,9 @@ class DatePickerViewModel: ObservableObject {
         // You can format the month as per your requirements
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM"
-        let monthString = dateFormatter.monthSymbols[month - 1]
+        var monthString = dateFormatter.monthSymbols[month - 1]
+        var i = monthString.index(monthString.startIndex, offsetBy: 3)
+        var removed_String = monthString.remove(at: i)
         
         return monthString
     }
@@ -61,5 +63,11 @@ class DatePickerViewModel: ObservableObject {
             print("Error formatting date")
             return Date()
         }
+    }
+}
+
+extension StringProtocol {
+    subscript(offset: Int) -> Character {
+        self[index(startIndex, offsetBy: offset)]
     }
 }
