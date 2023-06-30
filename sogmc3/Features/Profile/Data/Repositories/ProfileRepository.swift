@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 struct ProfileRemoteDataSourceMock: ProfileRemoteDataSourceProtocol {
     func getPublicAccessToken() async -> Result<AuthResponse, RequestError> {
@@ -22,12 +23,12 @@ struct ProfileRemoteDataSourceMock: ProfileRemoteDataSourceProtocol {
 
 struct ProfileRepository {
     
-    let profileLocalDataSource: ProfileLocalDataSourceProtocol
-    let profileRemoteDataSource: ProfileRemoteDataSourceProtocol
+    let profileLocalDataSource = ProfileLocalDataSource()
+    let profileRemoteDataSource = ProfileRemoteDataSource()
     
     init() {
-        self.profileLocalDataSource = ProfileLocalDataSource()
-        self.profileRemoteDataSource = ProfileRemoteDataSource()
+//        self.profileLocalDataSource = ProfileLocalDataSource()
+//        self.profileRemoteDataSource = ProfileRemoteDataSource()
         
 //        #if DEBUG
 //        profileRemoteDataSource = ProfileRemoteDataSourceMock()
@@ -56,18 +57,40 @@ struct ProfileRepository {
         try profileLocalDataSource.readPublicAccessToken()
     }
     
-    func fetchUserAccessToken(for userID: String) async throws {
-        let result = await profileRemoteDataSource.getUserAuthTokens(for: userID)
+    /// Fetch user access tokens and save it to the keychain
+    @discardableResult
+    func fetchUserAccessToken(for userID: String) async throws -> [String] {
+        let result = await profileRemoteDataSource.getAllUserTokens(for: "123")
+        let tokens: [UserAccessTokenResponse]
         switch result {
         case .success(let success):
-            let userAccessTokens = success.accessTokens
-            for accessToken in userAccessTokens {
-                try profileLocalDataSource.saveUserAccessToken(accessToken.accessToken, forBankID: accessToken.bankId)
-                print("\(accessToken) saved")
-            }
+            tokens = success
         case .failure(let failure):
             throw failure
         }
+        
+        try profileLocalDataSource.saveAccessTokens(tokens)
+        
+        return tokens.map { $0.accessToken }
     }
+    
+    @discardableResult
+    func readAccessTokens() throws -> [String] {
+        try profileLocalDataSource.readAccessToken()
+    }
+    
+//    func fetchUserAccessToken(for userID: String) async throws {
+//        let result = await profileRemoteDataSource.getUserAuthTokens(for: userID)
+//        switch result {
+//        case .success(let success):
+//            let userAccessTokens = success.accessTokens
+//            for accessToken in userAccessTokens {
+//                try profileLocalDataSource.saveUserAccessToken(accessToken.accessToken, forBankID: accessToken.bankId)
+//                print("\(accessToken) saved")
+//            }
+//        case .failure(let failure):
+//            throw failure
+//        }
+//    }
     
 }

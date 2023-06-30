@@ -26,6 +26,7 @@ struct TabBar2: View {
     @StateObject var assessmentVM = MockAssessmentViewModel()
     @StateObject var subCategoryVM = MockSubCategoryViewModel()
     @StateObject var categoryVM = MockCategoryViewModel()
+    @StateObject var categoryViewModel = CategoryViewModel()
     
     
     var body: some View {
@@ -50,16 +51,14 @@ struct TabBar2: View {
                 //MARK: TranscationView
                 case 1:
                     NavigationView {
-                        VStack {
-                            Text("2nd") //change to transaction menu
-                        }
+                       TransactionView()
                     }
                     
                 //MARK: Report View
                 case 2:
                     NavigationView {
                         VStack {
-                            Text("3rd") //change
+                            ReportView() //change to input menu
                         }
                     }
                     
