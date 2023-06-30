@@ -9,18 +9,33 @@ import SwiftUI
 
 class TransactionViewModel: ObservableObject, Identifiable {
     
-    var transactionList = TransactionRepositorySample()
+//    var transactionList = TransactionRepositorySample()
     @Published var stepTransaction = 0
     @Published var stepDate = 0
     @Published var yearMonthFromPicker: String = ""
     
-    var transaction: [TransactionModel] {
-        var transaction1 = [] as [TransactionModel]
-        for transaction in transactionList.transactions {
-            transaction1.append(transaction)
+    @Published var transactions: [TransactionEntity] = []
+    
+    // MARK: Dependency
+    let transactionRepository = TransactionRepository()
+    
+//    var transaction: [TransactionModel] {
+//        var transaction1 = [] as [TransactionModel]
+//        for transaction in transactionList.transactions {
+//            transaction1.append(transaction)
+//        }
+//
+//        return transaction1
+//    }
+    
+    func refreshTransactions() {
+        transactions.removeAll(keepingCapacity: true)
+        Task {
+            let result = await transactionRepository.readTransactions()
+            await MainActor.run {
+                transactions = result
+            }
         }
-        
-        return transaction1
     }
     
     func dateToStringMonthDate(value: Date) -> String {
@@ -41,13 +56,13 @@ class TransactionViewModel: ObservableObject, Identifiable {
         var uniqueDate = [Date]()
         var uniqueDateReal = Set<DateComponents>()
 
-        for transaction in transactionList.transactions {
+        for transaction in transactions {
 //            print(yearMonthFromPicker)
 //            if(dateToStringMonthYear(value: transaction.transactionDate) == yearMonthFromPicker){
 //                dates.append(transaction.transactionDate)
 //            }
             
-            dates.append(transaction.transactionDate)
+            dates.append(transaction.transactionDate!)
         }
         print(dates.count)
 
