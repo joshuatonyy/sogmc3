@@ -105,6 +105,7 @@ struct TransactionRepository {
                 newTransactionEntity.transactionAmount = Int64(transaction.amount)
                 newTransactionEntity.transactionDate = date
                 newTransactionEntity.transactionaName = transaction.description
+                newTransactionEntity.isDebit = transaction.direction == "in"
                 
                 let newSubcatory = SubCategoryEntity(context: context)
                 newSubcatory.subCategoryName = transaction.category.categoryName.capitalized

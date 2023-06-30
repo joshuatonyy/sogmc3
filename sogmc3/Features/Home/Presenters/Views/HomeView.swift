@@ -74,10 +74,11 @@ class MockTopSpendingViewModel: ObservableObject {
     ]
 }
 
-
 struct HomeView: View {
     @ObservedObject var homeVM: MockHomeViewModel
     @StateObject var topSpendVM = MockTopSpendingViewModel()
+    
+    @State var isShowDebugView = false // TODO: Delete
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -120,6 +121,7 @@ struct HomeView: View {
                         
                         //MARK: Notification
                         Button {
+                            isShowDebugView = true // TODO: Delete
                             print("Show Profile Page")
     //                        ProfileView()
                         }label: {
@@ -162,6 +164,9 @@ struct HomeView: View {
             if homeVM.isNotificationExist {
                 homeVM.isShowDimmedView = true
             }
+        }
+        .sheet(isPresented: $isShowDebugView) { // TODO: Delete
+            WebView(userID: "mock-user-dimas")
         }
     }
 }
