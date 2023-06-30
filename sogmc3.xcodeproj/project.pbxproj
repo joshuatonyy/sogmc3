@@ -45,6 +45,16 @@
 		423228E72A4D7EAD00A16534 /* CategoryRepositorySample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423228E62A4D7EAD00A16534 /* CategoryRepositorySample.swift */; };
 		423228EA2A4D8EA700A16534 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423228E92A4D8EA700A16534 /* CategoryViewModel.swift */; };
 		423228EC2A4DB35B00A16534 /* SubCategoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423228EB2A4DB35B00A16534 /* SubCategoryDetail.swift */; };
+		423228F22A4E4EC300A16534 /* MockTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423228EE2A4E4EC300A16534 /* MockTransaction.swift */; };
+		423228F32A4E4EC300A16534 /* inputCategoriesCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423228EF2A4E4EC300A16534 /* inputCategoriesCardView.swift */; };
+		423228F42A4E4EC300A16534 /* NoTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423228F02A4E4EC300A16534 /* NoTransactionView.swift */; };
+		423228F52A4E4EC300A16534 /* inputCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423228F12A4E4EC300A16534 /* inputCategoriesView.swift */; };
+		423228FC2A4E4F2500A16534 /* DropDownMenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423228F72A4E4F2500A16534 /* DropDownMenuOption.swift */; };
+		423228FD2A4E4F2500A16534 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423228F82A4E4F2500A16534 /* DropDown.swift */; };
+		423228FE2A4E4F2500A16534 /* DropDownMenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423228F92A4E4F2500A16534 /* DropDownMenuList.swift */; };
+		423228FF2A4E4F2500A16534 /* DropDownRowList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423228FA2A4E4F2500A16534 /* DropDownRowList.swift */; };
+		423229002A4E4F2500A16534 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423228FB2A4E4F2500A16534 /* Line.swift */; };
+		423229022A4E518800A16534 /* DropdownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423229012A4E518800A16534 /* DropdownViewModel.swift */; };
 		42E79F672A3E3857003B4482 /* sogmc3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E79F662A3E3857003B4482 /* sogmc3App.swift */; };
 		42E79F692A3E3857003B4482 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E79F682A3E3857003B4482 /* ContentView.swift */; };
 		42E79F6B2A3E3857003B4482 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42E79F6A2A3E3857003B4482 /* Assets.xcassets */; };
@@ -101,6 +111,16 @@
 		423228E62A4D7EAD00A16534 /* CategoryRepositorySample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepositorySample.swift; sourceTree = "<group>"; };
 		423228E92A4D8EA700A16534 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		423228EB2A4DB35B00A16534 /* SubCategoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryDetail.swift; sourceTree = "<group>"; };
+		423228EE2A4E4EC300A16534 /* MockTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTransaction.swift; sourceTree = "<group>"; };
+		423228EF2A4E4EC300A16534 /* inputCategoriesCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = inputCategoriesCardView.swift; sourceTree = "<group>"; };
+		423228F02A4E4EC300A16534 /* NoTransactionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoTransactionView.swift; sourceTree = "<group>"; };
+		423228F12A4E4EC300A16534 /* inputCategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = inputCategoriesView.swift; sourceTree = "<group>"; };
+		423228F72A4E4F2500A16534 /* DropDownMenuOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownMenuOption.swift; sourceTree = "<group>"; };
+		423228F82A4E4F2500A16534 /* DropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
+		423228F92A4E4F2500A16534 /* DropDownMenuList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownMenuList.swift; sourceTree = "<group>"; };
+		423228FA2A4E4F2500A16534 /* DropDownRowList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownRowList.swift; sourceTree = "<group>"; };
+		423228FB2A4E4F2500A16534 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		423229012A4E518800A16534 /* DropdownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownViewModel.swift; sourceTree = "<group>"; };
 		42E79F632A3E3857003B4482 /* sogmc3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sogmc3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E79F662A3E3857003B4482 /* sogmc3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sogmc3App.swift; sourceTree = "<group>"; };
 		42E79F682A3E3857003B4482 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -399,6 +419,28 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		423228ED2A4E4EC300A16534 /* InputCategories */ = {
+			isa = PBXGroup;
+			children = (
+				423228EF2A4E4EC300A16534 /* inputCategoriesCardView.swift */,
+				423228F12A4E4EC300A16534 /* inputCategoriesView.swift */,
+			);
+			path = InputCategories;
+			sourceTree = "<group>";
+		};
+		423228F62A4E4F2500A16534 /* DropDown */ = {
+			isa = PBXGroup;
+			children = (
+				423228F72A4E4F2500A16534 /* DropDownMenuOption.swift */,
+				423228F82A4E4F2500A16534 /* DropDown.swift */,
+				423228F92A4E4F2500A16534 /* DropDownMenuList.swift */,
+				423228FA2A4E4F2500A16534 /* DropDownRowList.swift */,
+				423228FB2A4E4F2500A16534 /* Line.swift */,
+				423229012A4E518800A16534 /* DropdownViewModel.swift */,
+			);
+			path = DropDown;
+			sourceTree = "<group>";
+		};
 		4239443F2A3E3AFD00E5F23E /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,7 +550,10 @@
 		428797182A4036960018869A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				423228F02A4E4EC300A16534 /* NoTransactionView.swift */,
+				423228EE2A4E4EC300A16534 /* MockTransaction.swift */,
 				80320C6C2A4AD3080027CB85 /* HomeView.swift */,
+				423228ED2A4E4EC300A16534 /* InputCategories */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -552,6 +597,7 @@
 		80320C562A4AD2730027CB85 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				423228F62A4E4F2500A16534 /* DropDown */,
 				80320C582A4AD2730027CB85 /* HomeComponent */,
 				80320C572A4AD2730027CB85 /* TabBar.swift */,
 				80320C612A4AD2730027CB85 /* TabBar2.swift */,
@@ -650,26 +696,35 @@
 				139FEAB82A454C6C004FB05D /* WebView.swift in Sources */,
 				139FEAA52A451E7F004FB05D /* KeychainError.swift in Sources */,
 				423228D02A4C4AA200A16534 /* TransactionView.swift in Sources */,
+				423228FC2A4E4F2500A16534 /* DropDownMenuOption.swift in Sources */,
 				423228E72A4D7EAD00A16534 /* CategoryRepositorySample.swift in Sources */,
 				139FEA8E2A447677004FB05D /* Endpoint.swift in Sources */,
+				423229002A4E4F2500A16534 /* Line.swift in Sources */,
 				80320C6A2A4AD2730027CB85 /* TopSpendingListCardComponent.swift in Sources */,
+				423228F32A4E4EC300A16534 /* inputCategoriesCardView.swift in Sources */,
 				80320C652A4AD2730027CB85 /* RemainingBalanceComponent.swift in Sources */,
 				423228DE2A4D792900A16534 /* ProgressBarReport.swift in Sources */,
 				423228CE2A4C4AA200A16534 /* CustomDatePicker.swift in Sources */,
+				423228FD2A4E4F2500A16534 /* DropDown.swift in Sources */,
 				139FEAAC2A452281004FB05D /* ProfileRemoteDataSourceProtocol.swift in Sources */,
 				139FEA9E2A448971004FB05D /* ProfileEndpoint.swift in Sources */,
 				423228D42A4C4AA200A16534 /* TransactionRepositorySample.swift in Sources */,
+				423228F52A4E4EC300A16534 /* inputCategoriesView.swift in Sources */,
 				423228CF2A4C4AA200A16534 /* TransactionList.swift in Sources */,
 				80320C642A4AD2730027CB85 /* PickerTopSpendingComponent.swift in Sources */,
+				423228FE2A4E4F2500A16534 /* DropDownMenuList.swift in Sources */,
 				80320C622A4AD2730027CB85 /* TabBar.swift in Sources */,
+				423228FF2A4E4F2500A16534 /* DropDownRowList.swift in Sources */,
 				139FEA522A41EDBA004FB05D /* Color+Theme.swift in Sources */,
 				42E79F692A3E3857003B4482 /* ContentView.swift in Sources */,
 				139FEA942A447958004FB05D /* HTTPClient.swift in Sources */,
 				423228D32A4C4AA200A16534 /* TransactionModel.swift in Sources */,
 				80320C662A4AD2730027CB85 /* DimmedViewComponent.swift in Sources */,
 				423228EC2A4DB35B00A16534 /* SubCategoryDetail.swift in Sources */,
+				423228F22A4E4EC300A16534 /* MockTransaction.swift in Sources */,
 				423228DC2A4D6CC500A16534 /* ReportCard.swift in Sources */,
 				1358469B2A4A99DF00588859 /* CoreDataManager.swift in Sources */,
+				423228F42A4E4EC300A16534 /* NoTransactionView.swift in Sources */,
 				135846A32A4A9CFE00588859 /* TransactionRepository.swift in Sources */,
 				1358469C2A4A99DF00588859 /* CoreDataContainer.xcdatamodeld in Sources */,
 				423228E52A4D7E2500A16534 /* SubCategoryModel.swift in Sources */,
@@ -692,6 +747,7 @@
 				80320C692A4AD2730027CB85 /* DashboardCardComponent.swift in Sources */,
 				80320C672A4AD2730027CB85 /* TopSpendingComponent.swift in Sources */,
 				139FEA922A44773B004FB05D /* RequestError.swift in Sources */,
+				423229022A4E518800A16534 /* DropdownViewModel.swift in Sources */,
 				423228D92A4D6C8300A16534 /* ReportView.swift in Sources */,
 				139FEA9C2A448916004FB05D /* ProfileRemoteDataSource.swift in Sources */,
 				423228D22A4C4AA200A16534 /* TransactionViewModel.swift in Sources */,
