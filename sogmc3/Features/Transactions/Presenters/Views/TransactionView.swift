@@ -14,8 +14,6 @@ struct TransactionView: View {
     
     @StateObject var customDatePickerViewModel = DatePickerViewModel()
     @StateObject var transactionViewModel = TransactionViewModel()
-    
-    
 
     var body: some View {
         ZStack {
@@ -35,8 +33,8 @@ struct TransactionView: View {
                 .padding(.top)
                 ScrollView{
                     //Looping buat tiap transaksi dimana bulan sama taunnya sesuai sama date picker
-                    ForEach(0..<transactionViewModel.uniqueDate.count) { idx in
-                        TransactionList(dateNow: transactionViewModel.uniqueDate[idx])
+                    ForEach(transactionViewModel.transactions) { transaction in
+                        TransactionList(dateNow: transaction.transactionDate!, transactionViewModel: transactionViewModel)
                             .padding(.top)
                     }
                 }
@@ -55,7 +53,11 @@ struct TransactionView: View {
                 .padding(.horizontal, 75)
                 .opacity(datePickerOn == true ? 1 : 0)
         
-        }.foregroundColor(Color.white)
+        }
+        .foregroundColor(Color.white)
+        .onAppear {
+            transactionViewModel.refreshTransactions()
+        }
     }
 }
 
