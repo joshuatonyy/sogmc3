@@ -26,7 +26,7 @@ struct WarningInformationComponent: View {
                 .frame(width: 304, height: 84, alignment: .center)
                 .background {
                     RoundedRectangle(cornerRadius: 4)
-                        .fill(Color(cgColor: #colorLiteral(red: 0.1091305837, green: 0.0192335397, blue: 0.04307378083, alpha: 1)))
+                        .fill(Color.Semantic.Danger.fill)
                         .background {
                             RoundedRectangle(cornerRadius: 4)
                                 .stroke(Color.Semantic.Danger.main, lineWidth: 1)
@@ -34,7 +34,6 @@ struct WarningInformationComponent: View {
                 }
             }
             .offset(x: 0, y: 30)
-            
         }
     }
 }
