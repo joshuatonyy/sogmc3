@@ -10,7 +10,6 @@ import SwiftUI
 struct TopSpendingListCardComponent: View {
     
     var subCategory: MockSubCategoryModel
-    var icon: String
     
     var body: some View {
         HStack {
@@ -18,7 +17,7 @@ struct TopSpendingListCardComponent: View {
             ZStack {
                 subCategory.categoryColor
                 
-                Text(icon)
+                Text(subCategory.subCatIcon!)
             }
             .frame(width: 48, height: 48)
             .clipShape(Circle())
@@ -26,7 +25,7 @@ struct TopSpendingListCardComponent: View {
 
             //MARK: Category Name & Price
             VStack(alignment: .leading) {
-                Text(subCategory.subCatName)
+                Text(subCategory.subCatName!.rawValue)
                     .font(.body)
                 Text("Rp \(String(format: "%.f", subCategory.subCatTotalPrice))")
                     .font(.footnote)
