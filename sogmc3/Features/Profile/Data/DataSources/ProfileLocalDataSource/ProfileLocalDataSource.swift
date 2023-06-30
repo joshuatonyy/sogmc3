@@ -42,7 +42,13 @@ struct ProfileLocalDataSource: ProfileLocalDataSourceProtocol, KeychainClient {
                 let userAccessToken = UserAccessTokenEntity(context: context)
                 userAccessToken.bankID = token.bankId
                 userAccessToken.key = UUID().uuidString
-                userAccessToken.lastUpdated = .distantPast
+                
+                var dateComponents = DateComponents()
+                dateComponents.month = -1
+
+                let calendar = Calendar.current
+                let oneMonthBefore = calendar.date(byAdding: dateComponents, to: .now)
+                userAccessToken.lastUpdated = oneMonthBefore
                 tokenStrings.append(token.accessToken)
                 try saveUserAccessToken(token.accessToken, forKey: userAccessToken.key!)
                 

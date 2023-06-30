@@ -60,11 +60,13 @@ struct ProfileRepository {
     /// Fetch user access tokens and save it to the keychain
     @discardableResult
     func fetchUserAccessToken(for userID: String) async throws -> [String] {
-        let result = await profileRemoteDataSource.getAllUserTokens(for: "123")
+        print("fetchUserAccessToken called")
+        let result = await profileRemoteDataSource.getAllUserTokens(for: "mock-dimas")
         let tokens: [UserAccessTokenResponse]
         switch result {
         case .success(let success):
             tokens = success
+            dump(tokens)
         case .failure(let failure):
             throw failure
         }

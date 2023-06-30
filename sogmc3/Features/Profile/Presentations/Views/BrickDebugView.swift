@@ -50,7 +50,7 @@ struct BrickDebugView: View {
             
             Button {
                 Task {
-                    let result = await profileRepository.profileRemoteDataSource.getAllUserTokens(for: "mock-user-id")
+                    let result = await profileRepository.profileRemoteDataSource.getAllUserTokens(for: "mock-dimas")
                     switch result {
                     case .success(let success):
                         print(success)
@@ -121,7 +121,7 @@ struct BrickDebugView: View {
                             newTransactionEntity.transactionaName = transaction.description
                             
                             let newSubcatory = SubCategoryEntity(context: context)
-                            newSubcatory.subCategoryName = transaction.category.categoryName.capitalized
+                            newSubcatory.subCategoryName = transaction.category?.categoryName.capitalized
                             newTransactionEntity.subcategories = newSubcatory
                             
                             try context.save()
@@ -153,7 +153,7 @@ struct BrickDebugView: View {
         }
         .sheet(isPresented: $showBrickWidget) {
             if let publicAccessToken {
-                WebView(userID: "mock-user-dimas")
+                WebView(userID: "mock-dimas")
             }
         }
     }

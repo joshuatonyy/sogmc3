@@ -30,6 +30,7 @@ class ConnectedBankViewModel: ObservableObject {
 
 struct ConnectedBankSections: View {
     @ObservedObject var connectedBankVM: ConnectedBankViewModel
+    @State var showBrickWidget = false
     
     var body: some View {
         ScrollView(.horizontal){
@@ -37,19 +38,31 @@ struct ConnectedBankSections: View {
                 ForEach(connectedBankVM.connectedWallet, id: \.walletID) { bank in
                     BankCard(bank: bank)
                 }
-                ZStack{
-                    RoundedRectangle(cornerRadius: 4)
-                        .frame(width: 44,height: 44)
-                    
+                Button {
+                    showBrickWidget = true
+                } label:  {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 4)
+                            .frame(width: 44,height: 44)
+                        
                         // TODO: change foreground color to system
-                        .foregroundColor(Color(.gray))
-                    Image(systemName: "plus")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 11, height: 16)
+                            .foregroundColor(Color(.gray))
+                        Image(systemName: "plus")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 11, height: 16)
+                    }
                 }
-
+                
             }
+        }
+        .sheet(isPresented: $showBrickWidget, onDismiss: {
+            Task {
+                let profileRepository = ProfileRepository()
+                _ = try! await profileRepository.fetchUserAccessToken(for: "mock-dimas")
+            }
+        }) {
+            WebView(userID: "mock-dimas")
         }
     }
 }
