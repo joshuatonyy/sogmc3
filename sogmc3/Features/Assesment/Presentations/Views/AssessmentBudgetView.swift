@@ -59,7 +59,7 @@ struct AssessmentBudgetView: View {
             
         }
         .frame(maxHeight: .infinity, alignment: .top)
-        .padding()
+//        .padding()
         .background(Color.Background.main)
         .edgesIgnoringSafeArea(.all)
     }

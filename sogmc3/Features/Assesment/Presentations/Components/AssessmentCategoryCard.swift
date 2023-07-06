@@ -35,7 +35,8 @@ struct AssessmentCategoryCard: View {
                 
                 //MARK: List of SubCategories within Categories
                 AssessmentSubCategoryListComponent(subCategoryVM: subCategoryVM,
-                                                   category: category)
+                                                   category: category,
+                                                   isViewClickable: true)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.leading, 16)

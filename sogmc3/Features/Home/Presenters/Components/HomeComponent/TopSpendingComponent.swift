@@ -20,6 +20,7 @@ struct TopSpendingComponent: View {
             
             PickerTopSpendingComponent(subCategoryVM: _subCategoryVM)
                 .padding(.bottom, 10)
+
             
             Divider()
                 .overlay(Color.Neutral.s90)

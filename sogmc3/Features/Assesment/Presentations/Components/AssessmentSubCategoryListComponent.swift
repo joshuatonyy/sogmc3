@@ -11,14 +11,22 @@ struct AssessmentSubCategoryListComponent: View {
     
     @ObservedObject var subCategoryVM: MockSubCategoryViewModel
     var category: EnumCategoryNames
+    var isViewClickable: Bool
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            ForEach(AssessmentHelper().getRows(category: category, subCategoryData: subCategoryVM.subCategoryData), id: \.self) { columns in
+            ForEach(AssessmentHelper().getRows(category: category,
+                                               subCategoryData: subCategoryVM.subCategoryData,
+                                               isViewClickable: isViewClickable),
+                    id: \.self) { columns in
                 HStack(spacing: 8) {
                     ForEach(columns, id: \.self) { item in
-                        var index = AssessmentHelper().getIndex(item: item, category: category, in: subCategoryVM.subCategoryData)
+                        var index = AssessmentHelper().getIndex(item: item,
+                                                                category: category,
+                                                                in: subCategoryVM.subCategoryData,
+                                                                isViewClickable: isViewClickable)
                         if index != -1 {
+                            //MARK: Showing Icon and Name of SubCategory
                             HStack(spacing: 2) {
                                 Text(subCategoryVM.subCategoryData[index].subCatIcon!)
                                     .font(.footnote)
@@ -36,17 +44,18 @@ struct AssessmentSubCategoryListComponent: View {
                                         Color.ButtonColor.unclicked.opacity(0.65))
                             )
                             .onTapGesture {
-                                //MARK: to change the status
-                                let subCategoryIndex = subCategoryVM.subCategoryData.firstIndex(where: {$0.subCatName!.rawValue == item})! as Int
-                                index = subCategoryIndex
-                                subCategoryVM.subCategoryData[subCategoryIndex].isChecked.toggle()
+                                //MARK: to change the status if isViewClickable is true
+                                if isViewClickable {
+                                    let subCategoryIndex = subCategoryVM.subCategoryData.firstIndex(where: {$0.subCatName!.rawValue == item})! as Int
+                                    index = subCategoryIndex
+                                    subCategoryVM.subCategoryData[subCategoryIndex].isChecked.toggle()
+                                }
                             }
                         }
                     }
                 }
             }
         }
-//        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
@@ -54,6 +63,7 @@ struct AssessmentSubCategoryListComponent: View {
 struct AssessmentSubCategoryListComponent_Previews: PreviewProvider {
     static var previews: some View {
         AssessmentSubCategoryListComponent(subCategoryVM: MockSubCategoryViewModel(),
-                                           category: .needs)
+                                           category: .needs,
+                                           isViewClickable: false)
     }
 }

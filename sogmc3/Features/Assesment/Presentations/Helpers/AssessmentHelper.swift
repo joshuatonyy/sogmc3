@@ -11,7 +11,7 @@ import SwiftUI
 
 class AssessmentHelper {
     //MARK: Get the index of current item Sub Category
-    func getIndex(item: String, category: EnumCategoryNames, in subCategoryData: [MockSubCategoryModel]) -> Int {
+    func getIndex(item: String, category: EnumCategoryNames, in subCategoryData: [MockSubCategoryModel], isViewClickable: Bool) -> Int {
         for (index, subCategory) in subCategoryData.enumerated() {
             if item == subCategory.subCatName!.rawValue && subCategory.categoryName == category {
                 return index
@@ -40,10 +40,22 @@ class AssessmentHelper {
     
     
     //MARK: Get total rows for showing data in Tag View
-    func getRows(category: EnumCategoryNames, subCategoryData: [MockSubCategoryModel]) -> [[String]] {
+    func getRows(category: EnumCategoryNames, subCategoryData: [MockSubCategoryModel], isViewClickable: Bool) -> [[String]] {
         
-        let modifiedSubCategoryData = getWidth(subCategoryData)
+        var modifiedSubCategoryData: [MockSubCategoryModel] {
+            if isViewClickable {
+                return getWidth(subCategoryData)
+            }
+            else {
+                //filter the choosen sub category by user
+                return getWidth(subCategoryData).filter { subCategory in
+                    subCategory.isChecked == true
+                    
+                }
+            }
+        }
         
+
         var rows: [[String]] = []
         var currentRow: [String] = []
         

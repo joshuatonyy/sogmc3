@@ -86,6 +86,7 @@ struct TabBar2: View {
                 //MARK: Assessment Result View
                 case 7:
                     AssessmentResultView(assessmentVM: assessmentVM,
+                                         subCategoryVM: subCategoryVM,
                                          selectedMenu: $selectedMenu)
                 default:
                     Text("Default View")

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct AssessmentResultView: View {
     @ObservedObject var assessmentVM: MockAssessmentViewModel
+    @ObservedObject var subCategoryVM: MockSubCategoryViewModel
     @Binding var selectedMenu: Int
-
     
     var body: some View {
         ScrollView {
@@ -51,20 +51,29 @@ struct AssessmentResultView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
 
                     Divider()
-                        .overlay(Color(uiColor: UIColor(#colorLiteral(red: 0.380392164, green: 0.380392164, blue: 0.380392164, alpha: 1))))
+                    //MARK: Change Color
+                        .overlay(Color.DividerColor.main)
                         .frame(maxWidth: .infinity, alignment: .center)
                     
                 }
                 .frame(maxWidth: 361)
                 .foregroundColor(.white)
                 .padding(.bottom, 50)
-                
-                
+  
+                //MARK: Showing subcategory budget and details of each category
+                ForEach(assessmentVM.categoryDatas, id: \.0) { item in
+                    AssessmentExpenseBreakdownComponent(assessmentVM: assessmentVM,
+                                                        subCategoryVM: subCategoryVM,
+                                                        categoryName: item.0,
+                                                        categoryColor: item.1)
+                }
+             
+            
                 
                 //MARK: Button
                 Button {
-                    //go to AssessmentSubCatView
-                    selectedMenu = 1
+                    //go to Dashboard Page
+                    selectedMenu = 0
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 20)
@@ -89,6 +98,7 @@ struct AssessmentResultView: View {
 struct AssessmentResultView_Previews: PreviewProvider {
     static var previews: some View {
         AssessmentResultView(assessmentVM: MockAssessmentViewModel(),
+                             subCategoryVM: MockSubCategoryViewModel(),
                              selectedMenu: .constant(5))
     }
 }
